@@ -54,10 +54,11 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 
 ***2.存储内容***
 栈：存储当前线程正在执行的饭饭的栈帧。
-堆：存储对象实例和数组
+堆：存储所有对象实例（包含其字段名）和数组（包含数组元素）。
+> 注意：类元信息（Class metadata）
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ2ODQwMzM3LDQxNjk0Mzk1MiwtNTk4OD
-c1MDMyXX0=
+eyJoaXN0b3J5IjpbLTMxMDAwMzc1NSw0MTY5NDM5NTIsLTU5OD
+g3NTAzMl19
 -->
