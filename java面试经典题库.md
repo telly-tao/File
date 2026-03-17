@@ -60,11 +60,12 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 
 ***3.生命周期管理***
 - 栈：自动管理与作用域绑定
-方法调用时，对应的栈帧被压入栈顶；方法执行结束（正常返回或抛出异常）时栈帧被
+方法调用时，对应的栈帧被压入栈顶；方法执行结束（正常返回或抛出异常）时栈帧被弹出销毁。
+栈帧销毁意味着其中的局部变量（基本类型、对象引用）立即失效。
 - 堆：有垃圾回收器（Garbage Collector，GC）管理
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkzMTI4MjgzLDQxNjk0Mzk1MiwtNTk4OD
-c1MDMyXX0=
+eyJoaXN0b3J5IjpbLTE2MDk4MjE0NDcsNDE2OTQzOTUyLC01OT
+g4NzUwMzJdfQ==
 -->
