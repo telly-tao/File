@@ -117,7 +117,7 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  ![输入图片说明](/imgs/2026-03-17/fOc30g7usPeMRiUY.png)
  - 作用：提升内存访问效率（CPU通常按块读取内存）。
  
- ## 04、如何判断对象可以被回收
+## 04、如何判断对象可以被回收
  **1、可达性分析算法**
  从GC Roots对象出发，遍历引用链。若对象与GC Roots间无路径，则判定可回收。
  ***GC Roots 引用范畴***
@@ -138,10 +138,13 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  ***新生代（Yong Generation）：*** 新对象在Eden区创建，经过Minor GC后存活的对象进入Survivor区，默认经历15次GC后进入老年代。
  ***老年代（Old Generation）：*** 存放长期存活的对象，触发Full GC时回收。
  ***永久代/元空间：*** 存放类元数据，类卸载时回收相关对象。
- ## 05、你知道哪些垃圾收集算法
- 一、
+ 
+## 05、你知道哪些垃圾收集算法
+### 一、基础垃圾收集算法
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODk1NTE1MTU3LC05MDY3MDA4NzYsLTE5MD
-M3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5
-NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbMTQyNDQ5OTg2NywtOTA2NzAwODc2LC0xOT
+AzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQz
+OTUyLC01OTg4NzUwMzJdfQ==
 -->
