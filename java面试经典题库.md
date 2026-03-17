@@ -60,10 +60,10 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 
 ***3.生命周期管理***
 - 栈：自动管理与作用域绑定
-- 堆：有垃圾回收器（）
+- 堆：有垃圾回收器（Garbage Collector，GC）管理
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTY4MDQzMTUsNDE2OTQzOTUyLC01OT
-g4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbNTI2ODcyODM4LDQxNjk0Mzk1MiwtNTk4OD
+c1MDMyXX0=
 -->
