@@ -53,18 +53,18 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 （3）主要用于存储对象实例（new关键字创建的对象）和数组。
 
 ***2.存储内容***
-- 栈：存储当前线程正在执行时的栈帧。
+- 栈：存储当前线程正在执行方法的栈帧。
 - 堆：存储所有对象实例（包含其字段名）和数组（包含数组元素）。
 字符串常量池（String Table）在HotSpot JVM中通常也位于堆中（Java7及以后）
 > 注意：类元信息（Class Metadata）存储在方法区（Metaspace/PermGen）,不在堆中（Java8及以后Metaspace在本地）。
 
 ***3.生命周期管理***
 - 栈：自动管理与作用域绑定
-方法调用时，对应的栈帧被
+方法调用时，对应的栈帧被压入栈顶；方法执行结束（正常返回或抛出异常）时栈帧被
 - 堆：有垃圾回收器（Garbage Collector，GC）管理
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNTAxNDEyMCw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbMzkzMTI4MjgzLDQxNjk0Mzk1MiwtNTk4OD
+c1MDMyXX0=
 -->
