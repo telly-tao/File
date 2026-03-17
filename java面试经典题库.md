@@ -150,10 +150,13 @@ Java虚拟机主要采用以下几种基础垃圾收集算法：
 
 **2、标记-复制算法（Copying）：**
 将内存分为大小相等的两块，每次只使用一块，垃圾回收时将存活的对象复制到另一块内存中。
-优点：无内存碎片，适合对象存活率低的区域。
-缺点：
+- 优点：无内存碎片，适合对象存活率低的区域。
+- 缺点：内存利用率只有50%
+
+**3、标记-整理算法（Mark-Compact）：**
+标记
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MDQ3NTYzOCwtNTk5ODUyOTA1LC05MD
+eyJoaXN0b3J5IjpbLTIyMTY0NTcyOSwtNTk5ODUyOTA1LC05MD
 Y3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0
 NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
