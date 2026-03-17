@@ -13,7 +13,7 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 异常：OutOfMemoryError(当堆无法分配对象时)。
 ***2.方法区（Method Area）***
 作用：存储类信息、常量、静态变量、JIT编译后的代码。
-实现：JDK1.7时叫
+实现：JDK1.7时叫永久代；JDK1.8+元空间（Metaspace）,使用本地内存（不在手JVM堆大小限制）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4Mjc1MTcwNiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbNjA1MDQ0ODkzLC01OTg4NzUwMzJdfQ==
 -->
