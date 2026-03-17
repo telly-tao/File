@@ -37,6 +37,7 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 - 异常：同虚拟机栈（StackOverflowError/OutOfMemoryError）
 ### 三 、完整JVM内存模型图
 ![输入图片说明](/imgs/2026-03-17/b2JbGF2scGJyP3Fn.png)
+## 02、堆和栈的区别
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDYwMDE1NDEsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbNjY1MDg4Mzc1LC01OTg4NzUwMzJdfQ==
 -->
