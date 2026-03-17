@@ -123,10 +123,12 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  ***GC Roots 引用范畴***
  （1）虚拟机栈中的局部变量（栈帧中的本地变量表）
  （2）方法区中类静态属性引用的对象（static 变量）
- （3）方法区中常量引用的
+ （3）方法区中常量引用的对象（final常量）
+ （4）本地方法栈中JNI引用的对象（Native方法）
+ （5）
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDAwOTE4NzcsLTE5MDM3ODk1NzUsLT
-E0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3
-NTAzMl19
+eyJoaXN0b3J5IjpbMTE5NTU5MTAxLC0xOTAzNzg5NTc1LC0xND
+IxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUw
+MzJdfQ==
 -->
