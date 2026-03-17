@@ -7,9 +7,8 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 ### 一、线程共享区域 
 1.堆（Heap）
 作用：存放所有对象实例和数组。
-特点：（1）是垃圾回收（GC）的主要区域；
-（2）分为新生代（Yong Generation）和老年代（Old Generation）
-		新生代：包含Eden
+特点：（1）是垃圾回收（GC）的主要区域；（2）分为新生代（Yong Generation）和老年代（Old Generation）
+新生代：包含Eden区、Survivor From区和Survivor To区（默认比例8:1:1）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM5NjIyMzQ3LC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTQ0MzAxMzg0MSwtNTk4ODc1MDMyXX0=
 -->
