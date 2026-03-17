@@ -159,9 +159,10 @@ Java虚拟机主要采用以下几种基础垃圾收集算法：
 - 缺点：整理过程耗时过长
 
 ### 二、分代收集算法
+JVM根据对象生命周期特点采用分代收集算法，将内存划分为不同区域：
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTk1MTI5MTUsLTU5OTg1MjkwNSwtOT
+eyJoaXN0b3J5IjpbLTEyOTgyMTIyMzEsLTU5OTg1MjkwNSwtOT
 A2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYw
 NDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
