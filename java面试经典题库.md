@@ -85,8 +85,8 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 - 栈：无碎片化问题
 - 堆：可能产生内存碎片化。
 频繁创建和销毁不同大小的对象会导致内存中出现许多不连续的小空闲区域。
-现代GC算法（如G1、ZGC、Shenandoah）会进行压缩（Compaction）来减少或消除
+现代GC算法（如G1、ZGC、Shenandoah）会进行压缩（Compaction）来减少或消除碎片。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMzE2ODUyMSw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbNTg4NTM1NzE0LDQxNjk0Mzk1MiwtNTk4OD
+c1MDMyXX0=
 -->
