@@ -83,8 +83,10 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 
 ***6.碎片化***
 - 栈：无碎片化问题
-- 堆：可能产生
+- 堆：可能产生内存碎片化。
+频繁创建和销毁不同大小的对象会导致内存中出现许多不连续的小空闲区域。
+现代
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMDAzNzI2MSw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbLTIxMTI5MzIxMzUsNDE2OTQzOTUyLC01OT
+g4NzUwMzJdfQ==
 -->
