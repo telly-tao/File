@@ -23,9 +23,11 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 ***2.虚拟机栈（VM Stack）***
 作用：存储调用的栈帧（Stack Frame）。
 栈帧结构：
-局部变量表：存放
+（1）局部变量表：存放方法参数和局部变量。
+（2）操作数栈：执行字节码指令的工作区（如加减乘除）。
+（3）
 ******
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNzk4NDk4NywtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbMjAzMTY2OTU2OSwtNTk4ODc1MDMyXX0=
 -->
