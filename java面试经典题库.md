@@ -77,8 +77,8 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 - 栈：
 StackOverflowError、OutOfMemoryError
 - 堆：
-
+OutOfMemoryError：Java heap space：堆中没有足够内存完成新对象的分配并且堆也无法再
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3MDYzNDU3Myw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbMzE2ODgxOTQ1LDQxNjk0Mzk1MiwtNTk4OD
+c1MDMyXX0=
 -->
