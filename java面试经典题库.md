@@ -49,8 +49,10 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 （3）主要用于存储方法执行时的栈帧。
 - 堆（Heap）：
 （1）是线程共享的内存区域。
-（2）JVM
+（2）JVM启动时创建，**整个JVM进程只有一个堆**。
+（3）主要用于存储对象实例（new关键字创建的对象）和数组。
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzAzMDExNzcsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbMTUwNTIwMjgxOCwtNTk4ODc1MDMyXX0=
 -->
