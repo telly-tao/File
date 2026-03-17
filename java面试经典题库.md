@@ -129,9 +129,10 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  ![输入图片说明](/imgs/2026-03-17/ug0qQibsrJGGhyiy.png)
  结论：ObjectF因与GC Roots无路径，可被回收。
  **2、四种引用决定回收策略
- （1）
+ （1）强引用（Strong Reference）：永不回收
+ （2）软引用（Soft Reference）：内存不足时回收
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MjMzMTEzMCwtMTkwMzc4OTU3NSwtMT
+eyJoaXN0b3J5IjpbLTM1MTI3NzU1MSwtMTkwMzc4OTU3NSwtMT
 QyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1
 MDMyXX0=
 -->
