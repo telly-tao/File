@@ -121,10 +121,11 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  **1、可达性分析算法**
  从GC Roots对象出发，遍历引用链。若对象与GC Roots间无路径，则判定可回收。
  ***GC Roots 引用范畴***
- （1）虚拟机栈中的局部变量
+ （1）虚拟机栈中的局部变量（栈帧中的本地变量表）
+ （2）方法区中类静态属性引用的对象（static ）
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTQ1MjcwODEsLTE5MDM3ODk1NzUsLT
+eyJoaXN0b3J5IjpbLTE5MTg4NjY0NDksLTE5MDM3ODk1NzUsLT
 E0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3
 NTAzMl19
 -->
