@@ -173,9 +173,12 @@ JVM根据对象生命周期特点采用分代收集算法，将内存划分为�
 **2、CMS（Concurrent Mark-Sweep）**
  新生代：复制算法
 老年队：并发标记-清除
-**
+**3、G1垃圾回收器**
+将堆划分为多个Region
+Yong GC使用复制算法
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODcwNDIxNzksLTU5OTg1MjkwNSwtOT
-A2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYw
-NDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMTQxNTMwMjM1NywtNTk5ODUyOTA1LC05MD
+Y3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0
+NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
