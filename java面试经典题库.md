@@ -160,12 +160,14 @@ Java虚拟机主要采用以下几种基础垃圾收集算法：
 
 ### 二、分代收集算法
 JVM根据对象生命周期特点采用分代收集算法，将内存划分为不同区域：
-***新生代（Yong Generation）：*** 使用 *** 复制算法 ***分为Eden区和两个Survivor区（8:1:1比例）
+***1、新生代（Yong Generation）：*** 使用 *** 复制算法 ***分为Eden区和两个Survivor区（8:1:1比例）
  新对象在Eden区创建，经过Minor GC后存活的对象进入Survivor区，默认经历15次GC后进入老年代。
- ***老年代（Old Generation）：*** 
- 存放长期存活的对象，触发Full GC时回收。
+ ***2、老年代（Old Generation）：*** 使用 ***标记-清除或标记-整理*** 算法
+ 存放长期存活的对象，回收频率低于新生代。
+ 
+ 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzAxNTU0NywtNTk5ODUyOTA1LC05MD
+eyJoaXN0b3J5IjpbMTk4MTM2NDI0NiwtNTk5ODUyOTA1LC05MD
 Y3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0
 NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
