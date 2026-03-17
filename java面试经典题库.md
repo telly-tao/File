@@ -36,7 +36,8 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 - 作用：为JVM调用Native方法（如C/C++代码）服务。
 - 特点：与虚拟机栈类似，但服务于Native方法
 - 异常：同虚拟机栈（StackOverflowError/OutOfMemoryError）
-
+### 三 、完整JVM内存模型图
+![输入图片说明](/imgs/2026-03-17/b2JbGF2scGJyP3Fn.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MjU1OTQ5LC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMTAyODA4MTk3NiwtNTk4ODc1MDMyXX0=
 -->
