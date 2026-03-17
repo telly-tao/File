@@ -21,8 +21,11 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 ***1.程序计数器（Program Counter Register）***
 作用：用于存储下一条待执行指令的内存地址。线程切换后能恢复到正确执行位置。
 ***2.虚拟机栈（VM Stack）***
-作用：存储调用的栈帧（）
+作用：存储调用的栈帧（Stack Frame）。
+栈帧结构：
+局部变量表：存放
+******
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNjYxMjk5NSwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTcxNzk4NDk4NywtNTk4ODc1MDMyXX0=
 -->
