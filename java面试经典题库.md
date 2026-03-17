@@ -79,8 +79,10 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 **OutOfMemoryError：** 如果栈可以动态扩展，但在扩展是无法申请到足够的内存。
 - 堆：
 **OutOfMemoryError：Java heap space：** 堆中没有足够内存完成新对象的分配，并且堆也无法再扩展。
-**OutOfMemoryError：GC Overhead limit exceeded等：** 由GC问题（如频繁Full GC但回收效果差）导致的OOM
+**OutOfMemoryError：GC Overhead limit exceeded等：** 由GC问题（如频繁Full GC但回收效果差）导致的OOM。
+
+***6***
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1MDIwMTE1LDQxNjk0Mzk1MiwtNTk4OD
-c1MDMyXX0=
+eyJoaXN0b3J5IjpbMTI2MjUxNjMxNSw0MTY5NDM5NTIsLTU5OD
+g3NTAzMl19
 -->
