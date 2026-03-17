@@ -14,8 +14,7 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 ***2.方法区（Method Area）***
 - 作用：存储类信息、常量、静态变量、JIT编译后的代码。
 - 实现：JDK1.7时叫永久代；JDK1.8+元空间（Metaspace）,使用本地内存（不在手JVM堆大小限制）
-包含子区域：运行时常量池
-存放类、方法、字段的符号引用和字面量（如String.interm()的字符串）
+包含子区域：运行时常量池-存放类、方法、字段的符号引用和字面量（如String.interm()的字符串）
 - 异常：OutOfMemoryError（元空间溢出）
 ### 二、线程私有区域（每个线程独立）
 ***1.程序计数器（Program Counter Register）***
@@ -39,5 +38,5 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 ### 三 、完整JVM内存模型图
 ![输入图片说明](/imgs/2026-03-17/b2JbGF2scGJyP3Fn.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODA4MTk3NiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTE5MDYwMDE1NDEsLTU5ODg3NTAzMl19
 -->
