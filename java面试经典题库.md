@@ -98,8 +98,8 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
 **1.对象头**
 对象头包含两类关键信息：
 ***Mark Word：*** 存储对象自身的运行时元数据，长度在32位系统为32位，在64位系统为64位。包含：哈希码（HashCode）、GC分代年龄（Generation GC Age）、锁状态标志（如偏向锁、轻量级锁、重量级锁）、线程持有的锁/偏向线程ID、偏向时间戳。
-***类型
+***类型指针：*** 指向方法区中对象的类元数据（Class 对象），JVM通过它确定对象属于哪个类。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjQzOTcxMzcsNDE2OTQzOTUyLC01OT
-g4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTM1Mzc2NDI4NCw0MTY5NDM5NTIsLTU5OD
+g3NTAzMl19
 -->
