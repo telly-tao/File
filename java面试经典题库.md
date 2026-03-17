@@ -66,8 +66,10 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 对象的生命周期从new创建开始；当对象不再被任何GC Roots对象通过引用链可达时（即成为“垃圾”），由GC在某个不确定的时刻自动回收其内存。
 程序员无法精确控制对象何时被回收。
 
-
+***4.线程安全***
+- 栈：天然线程安全
+- 堆：
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MTE2NjI3OSw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbLTExMzgyNTA0NjAsNDE2OTQzOTUyLC01OT
+g4NzUwMzJdfQ==
 -->
