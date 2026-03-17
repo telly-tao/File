@@ -118,9 +118,10 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  - 作用：提升内存访问效率（CPU通常按块读取内存）。
  
  ## 04、如何判断对象可以被回收
- 
+ **1、可达性分析算法**
+ 从
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3Njg0Nzc0NCwtMTQyMTU3OTU5NSwxND
+eyJoaXN0b3J5IjpbLTI5ODU2MDg4OCwtMTQyMTU3OTU5NSwxND
 c2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
