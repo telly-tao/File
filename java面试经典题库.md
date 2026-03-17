@@ -95,7 +95,8 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 
 ## 03、简述Java对象的结构
 Java对象在内存中的结构主要由三部分组成：***对象头（Object Header）*** 、***实例数据（Instance Data）*** 和 ***对齐填充（padding）*** 。
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NzI5MzE3OCw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbLTE0MjQ3ODQ4NTYsNDE2OTQzOTUyLC01OT
+g4NzUwMzJdfQ==
 -->
