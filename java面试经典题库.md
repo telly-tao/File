@@ -68,9 +68,11 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 
 ***4.线程安全***
 - 栈：天然线程安全
-因为每个线程操作
+因为每个线程操作自己的私有的栈，不存在线程件共享数据。
 - 堆：非线程安全
+堆是共享区域，多个线程可以同时访问或修改同一个堆上的对象。
+需要程序员使用
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NDY4MTg0Nyw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbLTEwNTc3MDEwNDksNDE2OTQzOTUyLC01OT
+g4NzUwMzJdfQ==
 -->
