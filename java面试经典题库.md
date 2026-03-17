@@ -42,7 +42,7 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 ### 三 、完整JVM内存模型图
 ![输入图片说明](/imgs/2026-03-17/b2JbGF2scGJyP3Fn.png)
 ## 02、堆和栈的区别
-*** 1、根本性质与归属***
+***1.根本性质与归属***
 - 栈（JVM Stack）：
 （1）是线程私有的内存区域。
 （2）每个线程在创建时都会分配一个独立栈。
@@ -52,8 +52,10 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 （2）JVM启动时创建，**整个JVM进程只有一个堆**。
 （3）主要用于存储对象实例（new关键字创建的对象）和数组。
 
+***2.***
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTg2NjY3MjA5Myw0MTY5NDM5NTIsLTU5OD
+g3NTAzMl19
 -->
