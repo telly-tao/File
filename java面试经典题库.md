@@ -116,7 +116,10 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  ![输入图片说明](/imgs/2026-03-17/KkqhhBz4Yqmi4o9b.png)
  ![输入图片说明](/imgs/2026-03-17/fOc30g7usPeMRiUY.png)
  - 作用：提升内存访问效率（CPU通常按块读取内存）。
+ - 
+ ## 04、如何判断对象可以被回收
+ 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODc3NDI2ODAsLTE0MjE1Nzk1OTUsMT
-Q3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbMzQ4OTQzMDAxLC0xNDIxNTc5NTk1LDE0Nz
+YwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
