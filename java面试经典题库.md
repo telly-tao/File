@@ -11,6 +11,7 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 新生代：包含Eden区、Survivor From区和Survivor To区（默认比例8:1:1）
 老年代：长期存和的对象。
 - 异常：OutOfMemoryError(当堆无法分配对象时)。
+
 ***2.方法区（Method Area）***
 - 作用：存储类信息、常量、静态变量、JIT编译后的代码。
 - 实现：JDK1.7时叫永久代；JDK1.8+元空间（Metaspace）,使用本地内存（不在手JVM堆大小限制）
@@ -20,6 +21,7 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 ***1.程序计数器（Program Counter Register）***
 - 作用：用于存储下一条待执行指令的内存地址。
 - 特点：唯一不会发生OutOfMemoryError的区域；线程切换后能恢复到正确执行位置。
+
 ***2.虚拟机栈（VM Stack）***
 - 作用：存储调用的栈帧（Stack Frame）。
 栈帧结构：
@@ -31,14 +33,17 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 - 异常：
 StackOverFlowError（栈深度超过限制，如无限递归）。
 OutOfMemoryError（扩展栈时无法申请到足够内存）。
-***本地方法栈（Native Method Stack）***
+
+***3.本地方法栈（Native Method Stack）***
 - 作用：为JVM调用Native方法（如C/C++代码）服务。
 - 特点：与虚拟机栈类似，但服务于Native方法
 - 异常：同虚拟机栈（StackOverflowError/OutOfMemoryError）
+
 ### 三 、完整JVM内存模型图
 ![输入图片说明](/imgs/2026-03-17/b2JbGF2scGJyP3Fn.png)
 ## 02、堆和栈的区别
-*** 1、***
+*** 1、根本性质与归属***
+栈
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTY2Njc1NzMsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbMTQzNTI0NDQxMCwtNTk4ODc1MDMyXX0=
 -->
