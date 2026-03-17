@@ -94,7 +94,7 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 现代GC算法（如G1、ZGC、Shenandoah）会进行压缩（Compaction）来减少或消除碎片。
 
 ## 03、简述Java对象的结构
-Java对象在内存中的结构主要由三部分组成：***对象头（Object Header）*** 、***实例数据（Instance Data）*** 和 ***对齐填充（padding）*** 。
+Java对象在内存中的结构主要由三部分组成：***对象头（Object Header）*** 、***实例数据（Instance Data）*** 和 ***对齐填充（Padding）*** 。
 **1.对象头（Object Header）**
 对象头包含两类关键信息：
 ***Mark Word：*** 存储对象自身的运行时元数据，长度在32位系统为32位，在64位系统为64位。包含：哈希码（HashCode）、GC分代年龄（Generation GC Age）、锁状态标志（如偏向锁、轻量级锁、重量级锁）、线程持有的锁/偏向线程ID、偏向时间戳。
@@ -105,7 +105,9 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  （1）基本类型优先：long/double>int/float>short/char>byte/boolen>引用类型。
  （2）父类字段在子类之前。
  字段重排序：为节省内存，JVM可能重新排列字段顺序（如将int和boolean相邻放置以减少对齐填充）。
+ **对齐填充（Padding）**
+ 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjMyMjMzODYsNDE2OTQzOTUyLC01OT
-g4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTgyNDgwNjQzMSw0MTY5NDM5NTIsLTU5OD
+g3NTAzMl19
 -->
