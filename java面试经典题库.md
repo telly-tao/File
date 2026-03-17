@@ -169,10 +169,10 @@ JVM根据对象生命周期特点采用分代收集算法，将内存划分为�
 ### 三、现代垃圾收集器的算法组合
 **1、Parallel Scavenge:**
 新生代：复制算法
-老年队
+老年队：
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDgyOTUzMzM4LC01OTk4NTI5MDUsLTkwNj
-cwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1
-MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTEyNzQ0ODEwNCwtNTk5ODUyOTA1LC05MD
+Y3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0
+NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
