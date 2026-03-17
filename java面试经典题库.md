@@ -155,9 +155,13 @@ Java虚拟机主要采用以下几种基础垃圾收集算法：
 
 **3、标记-整理算法（Mark-Compact）：**
 标记阶段与标记-清除相同，整理阶段：将所有存活的对象向一端移动。
-- 优点：避免内存碎片
+- 优点：避免内存碎片问题
+- 缺点：整理过程耗时过长
+
+### 二、分代收集算法
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTM0NTk1ODksLTU5OTg1MjkwNSwtOT
+eyJoaXN0b3J5IjpbLTEzMTk1MTI5MTUsLTU5OTg1MjkwNSwtOT
 A2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYw
 NDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
