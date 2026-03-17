@@ -97,8 +97,8 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 Java对象在内存中的结构主要由三部分组成：***对象头（Object Header）*** 、***实例数据（Instance Data）*** 和 ***对齐填充（padding）*** 。
 **1.对象头**
 对象头包含两类关键信息：
-***Mark Word：*** 存储对象自身的运行时元数据，长度在32为
+***Mark Word：*** 存储对象自身的运行时元数据，长度在32位系统为32位，在64位系统为64位。包含：哈希码（HashCode）、GC分代年龄（Generation GC Age）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyNDkzODA2Miw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbLTExMTczMTg0OTgsNDE2OTQzOTUyLC01OT
+g4NzUwMzJdfQ==
 -->
