@@ -14,6 +14,8 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 ***2.方法区（Method Area）***
 作用：存储类信息、常量、静态变量、JIT编译后的代码。
 实现：JDK1.7时叫永久代；JDK1.8+元空间（Metaspace）,使用本地内存（不在手JVM堆大小限制）
+包含子区域：运行时常量池
+存放类、方法、字段的符号引用和字面量（如）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjA1MDQ0ODkzLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMjEwOTA3ODcwMywtNTk4ODc1MDMyXX0=
 -->
