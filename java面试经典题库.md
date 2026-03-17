@@ -25,9 +25,10 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 栈帧结构：
 （1）局部变量表：存放方法参数和局部变量。
 （2）操作数栈：执行字节码指令的工作区（如加减乘除）。
-（3）
+（3）动态链接：指向方法区总该方法的符合引用。
+（4）返回地址：方法退出后返还到的指令位置。
 ******
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMTY2OTU2OSwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTE0OTUwNjcxMjEsLTU5ODg3NTAzMl19
 -->
