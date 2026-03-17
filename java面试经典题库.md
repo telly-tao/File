@@ -169,16 +169,16 @@ JVM根据对象生命周期特点采用分代收集算法，将内存划分为�
 ### 三、现代垃圾收集器的算法组合
 **1、Parallel Scavenge:**
 新生代：复制算法
-老年队：标记-整理
+老年代：标记-整理
 **2、CMS（Concurrent Mark-Sweep）**
  新生代：复制算法
-老年队：并发标记-清除
+老年代：并发标记-清除
 **3、G1垃圾回收器**
 将堆划分为多个Region
-Yong GC使用复制算法
-
+ 新生代：复制算法
+老年代：标记-整理和复制算法混合
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNTMwMjM1NywtNTk5ODUyOTA1LC05MD
+eyJoaXN0b3J5IjpbMTAzMTA0NDE0OSwtNTk5ODUyOTA1LC05MD
 Y3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0
 NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
