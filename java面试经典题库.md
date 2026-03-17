@@ -17,7 +17,9 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 包含子区域：运行时常量池
 存放类、方法、字段的符号引用和字面量（如String.interm()的字符串）
 异常：OutOfMemoryError（元空间溢出）
-### 二、
+### 二、线程私有区域（每个线程独立）
+***1.程序计数器（Progra）
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA4NTcxMDYxLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMjE0NTg2MDUwMywtNTk4ODc1MDMyXX0=
 -->
