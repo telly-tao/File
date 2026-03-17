@@ -132,9 +132,9 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  （1）强引用（Strong Reference）：永不回收
  （2）软引用（Soft Reference）：内存不足时回收，缓存（图片、网页）
  （3）弱引用（Weak Reference）：无论内存是否充足，GC必回收，缓存（WeakHashMap）
- （4）
+ （4）虚引用（Phantom Reference）：任何时候都可以回收，需配合引用队列使用。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjQyNDM3OSwtOTA2NzAwODc2LC0xOT
-AzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQz
-OTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTE0MjY4NTM0MjQsLTkwNjcwMDg3NiwtMT
+kwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0
+Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
