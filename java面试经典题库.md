@@ -142,14 +142,15 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
 ## 05、你知道哪些垃圾收集算法
 ### 一、基础垃圾收集算法
 Java虚拟机主要采用以下几种基础垃圾收集算法：
-**1、标记-清除算法（Mark-Sweep）：** 分为 ***标记*** 和 ***清除*** 两个阶段。
+**1、标记-清除算法（Mark-Sweep）：** 
+分为 ***标记*** 和 ***清除*** 两个阶段。
 - 标记阶段：识别所有需要回收的对象，
 - 清除阶段：回收被标记对象占用的空间。
 - 缺点：产生内存碎片，执行效率岁对象数量增加而降低
-**标记-复制算法（）
-
+**2、标记-复制算法（Copying）：**
+将内存分为大小相等的两块，每次只使用一块，垃圾回收
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQxNjgyMjYyLC01OTk4NTI5MDUsLTkwNj
-cwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1
-MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTgyMDI1MzQyMCwtNTk5ODUyOTA1LC05MD
+Y3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0
+NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
