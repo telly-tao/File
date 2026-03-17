@@ -107,11 +107,13 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  字段重排序：为节省内存，JVM可能重新排列字段顺序（如将int和boolean相邻放置以减少对齐填充）。
  **对齐填充（Padding）**
  JVM要求对象大小必须是8字节的整数倍。
- ··
- 实例对象：一个包含int id 和 String name 的类
+ ```
+ 实例对象：
+ 一个包含int id 和 String name 的类
  对象头：12字节，int id： 4字节，String name（引用）:4字节
  总计：20字节，需填充4字节，最终占用24字节。
+ ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMTkyMDk1MywxNDc2MDQ1MDMyLDQxNj
-k0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MT
+Y5NDM5NTIsLTU5ODg3NTAzMl19
 -->
