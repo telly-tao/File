@@ -64,9 +64,10 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 栈帧销毁意味着其中的局部变量（基本类型、对象引用）立即失效。
 - 堆：由垃圾回收器（Garbage Collector，GC）管理
 对象的生命周期从new创建开始；当对象不再被任何GC Roots对象通过引用链可达时（即成为“垃圾”），由GC在某个不确定的时刻自动回收其内存。
-程序员无法精确
+程序员无法精确控制对象何时被回收。
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MTg3NDI1Niw0MTY5NDM5NTIsLTU5OD
+eyJoaXN0b3J5IjpbMTk2MTE2NjI3OSw0MTY5NDM5NTIsLTU5OD
 g3NTAzMl19
 -->
