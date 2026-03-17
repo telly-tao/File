@@ -32,7 +32,9 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 StackOverFlowError（栈深度超过限制，如无限递归）。
 OutOfMemoryError（扩展栈时无法申请到足够内存）。
 ***本地方法栈（Native Method Stack）***
-- 作用：为JVM调用Native方法（如C/C++代码）
+- 作用：为JVM调用Native方法（如C/C++代码）服务。
+- 特点：与虚拟机栈类似，但服务于Native方法
+- 异常：同虚拟机栈（StackOverflowError/OutOfMe）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE5MDE5OTg4LC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTE1NjcyMzA2NSwtNTk4ODc1MDMyXX0=
 -->
