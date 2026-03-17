@@ -27,8 +27,10 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 （2）操作数栈：执行字节码指令的工作区（如加减乘除）。
 （3）动态链接：指向方法区总该方法的符合引用。
 （4）返回地址：方法退出后返还到的指令位置。
-******
+![输入图片说明](/imgs/2026-03-17/GBKQroK0ARLZM8Ox.png)
+异常：
+***本地方法栈（Native Method Stack）***
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTUwNjcxMjEsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbOTAyNTgwNzQ4LC01OTg4NzUwMzJdfQ==
 -->
