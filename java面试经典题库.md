@@ -127,9 +127,10 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  （4）本地方法栈中JNI引用的对象（Native方法）
  （5）虚拟机内部引用（如Class对象、异常对象等）
  ![输入图片说明](/imgs/2026-03-17/ug0qQibsrJGGhyiy.png)
- 结论：ObjectF因
+ 结论：ObjectF因与GC Roots无路径，可被回收。
+ 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxOTE3NDAyNCwtMTkwMzc4OTU3NSwtMT
-QyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1
-MDMyXX0=
+eyJoaXN0b3J5IjpbLTExMzMxNTYyMzAsLTE5MDM3ODk1NzUsLT
+E0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3
+NTAzMl19
 -->
