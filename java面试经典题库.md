@@ -52,7 +52,7 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 （2）JVM启动时创建，***整个JVM进程只有一个堆***。
 （3）主要用于存储对象实例（new关键字创建的对象）和数组。
 
-***2.存储内容***
+**2.存储内容**
 - 栈：存储当前线程正在执行方法的栈帧。
 栈帧：
 （1）局部变量表（Local Variable Array）：存放方法参数和局部变量。
@@ -64,7 +64,7 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 字符串常量池（String Table）在HotSpot JVM中通常也位于堆中（Java7及以后）
 > 注意：类元信息（Class Metadata）存储在方法区（Metaspace/PermGen）,不在堆中（Java8及以后Metaspace在本地）。
 
-***3.生命周期管理***
+**3.生命周期管理**
 - 栈：自动管理与作用域绑定
 方法调用时，对应的栈帧被压入栈顶；方法执行结束（正常返回或抛出异常）时栈帧被弹出销毁。
 栈帧销毁意味着其中的局部变量（基本类型、对象引用）立即失效。
@@ -72,29 +72,30 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 对象的生命周期从new创建开始；当对象不再被任何GC Roots对象通过引用链可达时（即成为“垃圾”），由GC在某个不确定的时刻自动回收其内存。
 程序员无法精确控制对象何时被回收。
 
-***4.线程安全***
+**4.线程安全**
 - 栈：天然线程安全
 因为每个线程操作自己的私有的栈，不存在线程件共享数据。
 - 堆：非线程安全
 堆是共享区域，多个线程可以同时访问或修改同一个堆上的对象。
 需要程序员使用synchronized、volatile、锁等机制来保证并发访问的正确性（可见性、原子性、有序性）否则会出现线程安全问题。
 
-***5.错误与异常***
+**5.错误与异常**
 - 栈：
-**StackOverflowError：** 当线程请求的栈超过虚拟机允许的最大深度（通常是深递归或过大的局部变量数组）
-**OutOfMemoryError：** 如果栈可以动态扩展，但在扩展是无法申请到足够的内存。
+***StackOverflowError：*** 当线程请求的栈超过虚拟机允许的最大深度（通常是深递归或过大的局部变量数组）
+***OutOfMemoryError：*** 如果栈可以动态扩展，但在扩展是无法申请到足够的内存。
 - 堆：
-**OutOfMemoryError：Java heap space：** 堆中没有足够内存完成新对象的分配，并且堆也无法再扩展。
-**OutOfMemoryError：GC Overhead limit exceeded等：** 由GC问题（如频繁Full GC但回收效果差）导致的OOM。
+***OutOfMemoryError：Java heap space：*** 堆中没有足够内存完成新对象的分配，并且堆也无法再扩展。
+***OutOfMemoryError：GC Overhead limit exceeded等：*** 由GC问题（如频繁Full GC但回收效果差）导致的OOM。
 
-***6.碎片化***
+**6.碎片化**
 - 栈：无碎片化问题
 - 堆：可能产生内存碎片化。
 频繁创建和销毁不同大小的对象会导致内存中出现许多不连续的小空闲区域。
 现代GC算法（如G1、ZGC、Shenandoah）会进行压缩（Compaction）来减少或消除碎片。
 
-## 03、
+## 03、简述Java对象的结构
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI3MjI4NDQ2LDQxNjk0Mzk1MiwtNTk4OD
+eyJoaXN0b3J5IjpbMjIwNTczMTkxLDQxNjk0Mzk1MiwtNTk4OD
 c1MDMyXX0=
 -->
