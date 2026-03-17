@@ -68,8 +68,9 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 
 ***4.线程安全***
 - 栈：天然线程安全
-- 堆：
+因为每个线程操作
+- 堆：非线程安全
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzgyNTA0NjAsNDE2OTQzOTUyLC01OT
-g4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTQ1NDY4MTg0Nyw0MTY5NDM5NTIsLTU5OD
+g3NTAzMl19
 -->
