@@ -55,10 +55,10 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 ***2.存储内容***
 栈：存储当前线程正在执行的饭饭的栈帧。
 堆：存储所有对象实例（包含其字段名）和数组（包含数组元素）。
-> 注意：类元信息（Class Metadata）存储在方法区（Mataspace/PermGen）,不在堆中
+> 注意：类元信息（Class Metadata）存储在方法区（Metaspace/PermGen）,不在堆中（Java8及以后Metaspace在本地）
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MzkyMzk3Miw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbLTE5NTUzNjc5OTMsNDE2OTQzOTUyLC01OT
+g4NzUwMzJdfQ==
 -->
