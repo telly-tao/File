@@ -10,7 +10,8 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 特点：（1）是垃圾回收（GC）的主要区域；（2）分为新生代（Yong Generation）和老年代（Old Generation）
 新生代：包含Eden区、Survivor From区和Survivor To区（默认比例8:1:1）
 老年代：长期存和的对象。
-异常：OutOfMemoryError(当堆无法分配对象时)
+异常：OutOfMemoryError(当堆无法分配对象时)。
+2.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzODI5MTk3OSwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbMTQ1MTEzMDQ5LC01OTg4NzUwMzJdfQ==
 -->
