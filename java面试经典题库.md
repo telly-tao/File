@@ -104,8 +104,8 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  字段排列顺序受虚拟机分配策略影响：
  （1）基本类型优先：long/double>int/float>short/char>byte/boolen>引用类型。
  （2）父类字段在子类之前。
- 
+ 字段重排序：为节省内存，JVM可能重新排列字段顺序（如将int和boolean）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NDI5NTIyMyw0MTY5NDM5NTIsLTU5OD
+eyJoaXN0b3J5IjpbMTc3NzY1NDg0Myw0MTY5NDM5NTIsLTU5OD
 g3NTAzMl19
 -->
