@@ -136,9 +136,11 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  **3、分代回收机制**
  Java堆内存分为不同区域，对象回收策略页不同：
  ***新生代（Yong Generation）：***新对象在Eden区创建，经过Minor GC后存活的对象进入Survivor区，默认经历15次GC后进入老年代。
- ***老年代（Old Generation）：***
+ ***老年代（Old Generation）：***存放长期存活的对象，触发Full GC时回收。
+ ***永久代/元空间：***
+ 存放
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4Njc5ODc3MCwtOTA2NzAwODc2LC0xOT
+eyJoaXN0b3J5IjpbMjAwMDY0ODc5NywtOTA2NzAwODc2LC0xOT
 AzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQz
 OTUyLC01OTg4NzUwMzJdfQ==
 -->
