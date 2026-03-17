@@ -74,9 +74,11 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 需要程序员使用synchronized、volatile、锁等机制来保证并发访问的正确性（可见性、原子性、有序性）否则会出现线程安全问题。
 
 ***5.错误与异常***
-- 栈
-- 堆
+- 栈：
+StackOverflowError、OutOfMemoryError
+- 堆：
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NTMzMzA4LDQxNjk0Mzk1MiwtNTk4OD
-c1MDMyXX0=
+eyJoaXN0b3J5IjpbLTg3MDYzNDU3Myw0MTY5NDM5NTIsLTU5OD
+g3NTAzMl19
 -->
