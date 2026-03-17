@@ -119,9 +119,10 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  
  ## 04、如何判断对象可以被回收
  **1、可达性分析算法**
- 从
+ 从GC Roots对象出发，遍历引用链。若对象与GC Roots间无路径，则判定可回收。
+ 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5ODU2MDg4OCwtMTQyMTU3OTU5NSwxND
-c2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMT
+Q3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
