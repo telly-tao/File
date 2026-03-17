@@ -141,10 +141,10 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  
 ## 05、你知道哪些垃圾收集算法
 ### 一、基础垃圾收集算法
-
+Java虚拟机主要采用以下几种基础垃圾
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNDQ5OTg2NywtOTA2NzAwODc2LC0xOT
-AzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQz
-OTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTE2MDU5MzAzOTMsLTkwNjcwMDg3NiwtMT
+kwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0
+Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
