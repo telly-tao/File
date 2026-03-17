@@ -75,11 +75,12 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 
 ***5.错误与异常***
 - 栈：
-StackOverflowError、OutOfMemoryError
+StackOverflowError：当线程请求的栈超过虚拟机允许的最大深度（通常是深递归或过大的）
+OutOfMemoryError：
 - 堆：
 OutOfMemoryError：Java heap space：堆中没有足够内存完成新对象的分配，并且堆也无法再扩展。
-OutOfMemoryError：GC Overhead limit exceeded等：由
+OutOfMemoryError：GC Overhead limit exceeded等：由GC问题
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTUwOTUwMDksNDE2OTQzOTUyLC01OT
-g4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMTI0OTQ5MTAyNyw0MTY5NDM5NTIsLTU5OD
+g3NTAzMl19
 -->
