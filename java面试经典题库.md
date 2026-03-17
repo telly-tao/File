@@ -54,6 +54,10 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 
 ***2.存储内容***
 - 栈：存储当前线程正在执行方法的栈帧。
+（1）局部变量表（Local Variable Array）：存放方法参数和局部变量。
+（2）操作数栈（Operand Stack）：执行字节码指令的工作区（如加减乘除）。
+（3）动态链接（Dynamic Linking）：指向方法区总该方法的符合引用。
+（4）返回地址（Return Address）：方法退出后返还到的指令位置。
 - 堆：存储所有对象实例（包含其字段名）和数组（包含数组元素）。
 字符串常量池（String Table）在HotSpot JVM中通常也位于堆中（Java7及以后）
 > 注意：类元信息（Class Metadata）存储在方法区（Metaspace/PermGen）,不在堆中（Java8及以后Metaspace在本地）。
@@ -87,6 +91,6 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 频繁创建和销毁不同大小的对象会导致内存中出现许多不连续的小空闲区域。
 现代GC算法（如G1、ZGC、Shenandoah）会进行压缩（Compaction）来减少或消除碎片。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg4NTM1NzE0LDQxNjk0Mzk1MiwtNTk4OD
+eyJoaXN0b3J5IjpbNzAwNzMzNTI1LDQxNjk0Mzk1MiwtNTk4OD
 c1MDMyXX0=
 -->
