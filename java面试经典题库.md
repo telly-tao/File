@@ -114,8 +114,8 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  总计：20字节，需填充4字节，最终占用24字节。
  ```
  ![输入图片说明](/imgs/2026-03-17/KkqhhBz4Yqmi4o9b.png)
- 
+ ![输入图片说明](/imgs/2026-03-17/fOc30g7usPeMRiUY.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg1OTc5MTA0LC0xNDIxNTc5NTk1LDE0Nz
-YwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMTQwNTc1MzUzNiwtMTQyMTU3OTU5NSwxND
+c2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
