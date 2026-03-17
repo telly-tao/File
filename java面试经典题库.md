@@ -144,8 +144,9 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
 Java虚拟机主要采用以下几种基础垃圾收集算法：
 **1、标记-清除算法（Mark-Sweep）：**
 
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5OTg1MjkwNSwtOTA2NzAwODc2LC0xOT
-AzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQz
-OTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMTEwMDU2MTY2OSwtNTk5ODUyOTA1LC05MD
+Y3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0
+NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
