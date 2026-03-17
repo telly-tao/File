@@ -134,9 +134,10 @@ Java对象在内存中的结构主要由三部分组成：***对象头（Object 
  （3）弱引用（Weak Reference）：无论内存是否充足，GC必回收，缓存（WeakHashMap）
  （4）虚引用（Phantom Reference）：任何时候都可以回收，需配合引用队列使用。
  **3、分代回收机制**
- Java堆内存分为
+ Java堆内存分为不同区域，对象回收策略页不同：
+ ***新生代（Yong Generation）：***新对象在Eden区创建，
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzY4ODQxNjYsLTkwNjcwMDg3NiwtMT
-kwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0
-Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTg5NzExMzcxMCwtOTA2NzAwODc2LC0xOT
+AzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQz
+OTUyLC01OTg4NzUwMzJdfQ==
 -->
