@@ -19,7 +19,8 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 - 异常：OutOfMemoryError（元空间溢出）
 ### 二、线程私有区域（每个线程独立）
 ***1.程序计数器（Program Counter Register）***
-- 作用：用于存储下一条待执行指令的内存地址。线程切换后能恢复到正确执行位置。
+- 作用：用于存储下一条待执行指令的内存地址。
+- 特点：唯一不会发生OutOfMemoryErrorde线程切换后能恢复到正确执行位置。
 ***2.虚拟机栈（VM Stack）***
 - 作用：存储调用的栈帧（Stack Frame）。
 栈帧结构：
@@ -34,7 +35,8 @@ OutOfMemoryError（扩展栈时无法申请到足够内存）。
 ***本地方法栈（Native Method Stack）***
 - 作用：为JVM调用Native方法（如C/C++代码）服务。
 - 特点：与虚拟机栈类似，但服务于Native方法
-- 异常：同虚拟机栈（StackOverflowError/OutOfMe）
+- 异常：同虚拟机栈（StackOverflowError/OutOfMemoryError）
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjcyMzA2NSwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbMTE1MjE2MTkxNiwtNTk4ODc1MDMyXX0=
 -->
