@@ -29,8 +29,10 @@ JVM内存模型分为**线程共享区域**和**线程私有区域**如下图：
 （4）返回地址：方法退出后返还到的指令位置。
 ![输入图片说明](/imgs/2026-03-17/GBKQroK0ARLZM8Ox.png)
 异常：
+StackOverFlowError（栈深度超过限制，如无限递归）。
+OutOfMemoryError（扩展栈时无法申请到足够内存）
 ***本地方法栈（Native Method Stack）***
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAyNTgwNzQ4LC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMTQ1MzY4OSwtNTk4ODc1MDMyXX0=
 -->
