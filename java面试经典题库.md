@@ -305,10 +305,13 @@ JVM会根据Java内存模型（JMM）的规范，***在生成字节码时插入�
 
 **3、锁并发工具类**
 JUC（java.util.concurent）中的锁（如ReentranLock）、原子类（如AtomicInteger）等，其内部实现也依赖内存屏障来保证线程安全，例如通过Unsafe类的putOrderedXXX、getAndAddXXX等方法间接使用内存屏障。
+
+## 09、如何排查和解决JVM内存泄漏问题?有哪些常用的工具和方法？
+### 一、内存泄漏的典型表现
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU2NTI4MzQ2LC0xMTUwMjUwMzIzLC0xMD
-AwMTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0
-MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NS
-wtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4
-ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbMTUwNjg2OTM0MCwtMTE1MDI1MDMyMywtMT
+AwMDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2
+NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1Nz
+UsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5
+ODg3NTAzMl19
 -->
