@@ -383,11 +383,12 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 
 **4、并发清除（Concurrent Sweep）——并发阶段**
 - ***操作***：清除所有未被比标记的对象（即垃圾对象），释放其占用的内存空间。
-- ***特点***：GC线程与用户线程同时运行，无STW；仅清除垃圾，不压缩
+- ***特点***：GC线程与用户线程同时运行，无STW；仅清除垃圾，不压缩内存（因此会产生内存碎片）。
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzYyNzQyNDQxLC0xMzY3NjIwMTM4LC0xMj
-I0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5
-NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MD
-UsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwx
-NDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTIwMjA0NTE3MDYsLTEzNjc2MjAxMzgsLT
+EyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0
+MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1Mj
+kwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1
+LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
