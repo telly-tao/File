@@ -318,13 +318,14 @@ JUC（java.util.concurent）中的锁（如ReentranLock）、原子类（如Atom
 （2）分析GC日志：开启GC日志（-XX:+PrintGCDetails  -XX:+PrintGCTimeStamps），查看Full GC频率、耗时及内存释放情况。若Full GC后老年代内存占用仍很高，可能存在泄漏。
 **2、捕获内存快照**
 在内存泄漏复现或接近OOM时，抓取堆 ***内存快照***（.hprof文件），常用命令
-···
-
-
+```doc
+#使用jmap生成快照
+jmap -dump:format-b,file=heapdump.hprof
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTQxNTQ4NjMsLTEyMjQwMzcyOTAsLT
-ExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3
-Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAwOD
-c2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIs
-NDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTQ4ODAwNDkyMiwtMTIyNDAzNzI5MCwtMT
+E1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcy
+Nzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4Nz
+YsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0
+MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
