@@ -216,10 +216,9 @@ Java虚拟机（JVM）从JDK8开始使用元空间（Metaspace）代替永久代
 |--------------|----------------|------------------|
 |**_内存区域_**|JVM堆内存的一部分|本地内存（进程地址空间）|
 |**_限制大小_**|固定大小，需手动配置|动态扩展，默认无上限（受物理内存限制）|
-
 |**_溢出风险_**|高（易因类过多触发OOM）|低（可通过MaxMetaspace限制）|
 
-**_垃圾回收_**
+|**_垃圾回收_**
 
 与老年代绑定，效率低
 
@@ -245,8 +244,8 @@ JVM中的及时编译器（JIT，Just-In-Time Comiler）是Java程序实现高�
 
 <![if !supportLists]>l <![endif]>编译后的机器码会被缓存，下次执行时直接复用。当代码依赖的类结构发生变化（如动态加载新类），可能导致以编译的机器码失效，此时JVM会重新编译相关的代码。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTUwMDk2NjQsLTEwNDcyNzk0MjYsLT
-Y3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3
-ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NT
-IsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbMTMxNDUzODU3MiwtMTA0NzI3OTQyNiwtNj
+c1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4
+OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1Mi
+wtNTk4ODc1MDMyXX0=
 -->
