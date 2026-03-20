@@ -357,11 +357,13 @@ jconsole/jvisualvm：图形化工具，监控内存、线程，支持生成快�
 - YourKit/JProfiler：商业工具，提供内存泄漏检测、CPU分析等功能，支持实时跟踪对象创建和销毁。
 
 ### 四、预防措施
-（1）跟风资源使用：及时关闭
+（1）跟风资源使用：及时关闭IO流、数据库连接等资源（使用try-with-resources）。
+（2）合理使用缓存：设置过去时间（如weakHashMap、GuavaCache）。
+（3）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMjIwMjQ2NCwtMTM2NzYyMDEzOCwtMT
-IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
-OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
-A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
-MTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbLTEzMTk4MjM1MzIsLTEzNjc2MjAxMzgsLT
+EyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0
+MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1Mj
+kwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1
+LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
