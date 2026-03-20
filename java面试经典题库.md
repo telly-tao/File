@@ -364,9 +364,9 @@ jconsole/jvisualvm：图形化工具，监控内存、线程，支持生成快�
 （5）压力测试：通过压测提取暴露内存泄漏问题（如使用JMeter配合监控工具）。
 
 ## 10、简述CMS垃圾收集器的工作流程，它有什么优缺点？
-
+CMS是一种 ***以最短回收停顿时间为目标的老年代垃圾回收器***，主要应用于对
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMDg1NjA4MiwtMTM2NzYyMDEzOCwtMT
+eyJoaXN0b3J5IjpbMTM2ODU3NzY1NSwtMTM2NzYyMDEzOCwtMT
 IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
 OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
 A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
