@@ -304,11 +304,11 @@ JVM会根据Java内存模型（JMM）的规范，***在生成字节码时插入�
 进入synchronized块时，JVM会插入类似LoadLoad、LoadStore的屏障，确保读取到共享变量的最新值；退出synchronized块时，会插入类似StoreStore、StoreLoad的屏障，确保当前线程的修改被其他线程可见。
 
 **3、锁并发工具类**
-JUC（java.util.concurent）中的锁（如ReentranLock）、原子类（如AtomicInteger）等，其内部实现也依赖
+JUC（java.util.concurent）中的锁（如ReentranLock）、原子类（如AtomicInteger）等，其内部实现也依赖内存屏障来保证线程安全，例如通过Unsafe类的putOrderedXXX、getAndAddXXX等方法间接使用内存屏障。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjAwNTI3NjEsLTExNTAyNTAzMjMsLT
-EwMDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4
-NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NT
-c1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01
-OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbNjU2NTI4MzQ2LC0xMTUwMjUwMzIzLC0xMD
+AwMTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0
+MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NS
+wtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4
+ODc1MDMyXX0=
 -->
