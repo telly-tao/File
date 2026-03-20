@@ -288,10 +288,11 @@ C2适合长期运行额服务（如Web服务器、微服务），通过前期的
 根据功能不同，内存屏障通常分为以下几类：
 （1）LoadLoad屏障：确保屏障前的加载指令（Load）先于屏障后的家长指令执行。
 （2）StoreStore屏障：确保屏障前的存储指令（Store）先于屏障后的存储指令执行。
-（3）
+（3）LoadStore屏障：确保屏障前的加载指令先于屏障后的存储指令执行。
+（4）StoreLoad屏障：确保屏障前的存储指令先于屏障后的加载
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIwNzE1NTU2LDEwNDA5NDgzMywtMTA0Nz
+eyJoaXN0b3J5IjpbNzE0NTg4MTgxLDEwNDA5NDgzMywtMTA0Nz
 I3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3
 NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLD
 QxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
