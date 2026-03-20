@@ -254,6 +254,7 @@ JIT会对代码进行多种优化，例如：
 ***（1）设计目标不同***
 C1编译器：轻量级编译器，以快速编译为核心目标，优先保证编译速度（建松编译开销），适合启动速度敏感的场景（如客户端应用）。
 C2编译器：重量级编译器，以生成高速优先的机器码为核心目标，编译耗时更长但能进行更深度的优化，适合长期运行的服务端应用。
+
 ***（2）优化深度不同***
 C1的优化：以简单、局部优化为主，包括：
 方法内联（有限度，避免编译耗时过长）
@@ -264,10 +265,13 @@ C2的优化：支持更复杂、全局的优化，包括：
 深度方法内联（夸多层调用）
 循环优化（循环展开、循环不变量外提、循环剥离）
 逃逸分析语栈上分配（减少堆内存分配）
-寄存器分配
+寄存器分配优化（最大化利用CPU寄存器）
+预测性优化（如分支预测、空值检查消除）
 
+**（3）编译耗时与执行效率**
+C1编译器速度快（通常毫秒级）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzOTk5OTIxOSwxMDQwOTQ4MzMsLTEwND
+eyJoaXN0b3J5IjpbMTQwMTk1ODIxMywxMDQwOTQ4MzMsLTEwND
 cyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4
 NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMi
 w0MTY5NDM5NTIsLTU5ODg3NTAzMl19
