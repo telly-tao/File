@@ -379,7 +379,7 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 
 **3、重新标记（Remark）——STW阶段**
 - ***操作***：修正并发标记阶段因用户操作导致的标记偏差（如“漏标”或“错标”）。
-- ***特点***：需要ST，但停顿时间比初始标记长（但远短于Full GC），通常通过“增量更新”或“原始快照”等算法高效修正。
+- ***特点***：需要STW，但停顿时间比初始标记长（但远短于Full GC），通常通过“增量更新”或“原始快照”等算法高效修正。
 
 **4、并发清除（Concurrent Sweep）——并发阶段**
 - ***操作***：清除所有未被比标记的对象（即垃圾对象），释放其占用的内存空间。
@@ -387,11 +387,12 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 
 ### 二、CMS的优缺点
 ***优点***
-（1）停顿时间短：仅初始标记和重新标记需要STW
+（1）停顿时间短：仅初始标记和重新标记需要STW,且总停顿时间短，适合响应时间敏感的场景（如Web服务）。
+（2）并发执行：大部分工作（并发标记、并发清除）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM3NDYyMzMyLC0xMzY3NjIwMTM4LC0xMj
-I0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5
-NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MD
-UsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwx
-NDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTg2NDA2NDcxOCwtMTM2NzYyMDEzOCwtMT
+IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
+OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
+A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
+MTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
