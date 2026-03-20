@@ -279,10 +279,10 @@ C2适合长期运行额服务（如Web服务器、微服务），通过前期的
 现代JVM（如HotSpot）默认启用分层编译，C1和C2通常配合工作：
 代码先被C1快速编译，保证程序启动并进入优化执行阶段；
 若代码持续被频繁调用（热点中的热点），则有C2重新编译，生成更优的机器码，进一步提升性能。
-
+## 08、什么是内存屏障？JVM如何使用内存屏障保证指令执行顺序？
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3OTI5NDUzMCwxMDQwOTQ4MzMsLTEwND
-cyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4
-NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMi
-w0MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbLTE0ODk5MjkwMTgsMTA0MDk0ODMzLC0xMD
+Q3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAw
+ODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMz
+IsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
