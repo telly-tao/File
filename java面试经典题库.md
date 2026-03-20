@@ -368,17 +368,19 @@ CMS是一种 ***以最短回收停顿时间为目标的老年代垃圾回收器*
 ### 一、CMS工作流程（4个核心阶段）
 CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户线程（STW），其余阶段与用户线程并发执行。流程如下：
 **1、初始标记（Initial Mark）——STW阶段**
-- ***操作**：快速标记GC Roots直接关联的对象（如虚拟机栈中引用的对象、方法区中类静态变量引用的对象等）。
-- 特点：仅标记根对象，不深入追踪引用链，因此停顿时间极短（通常毫秒级）。
-- 示例：若根对象为A，则仅标记A，不标记A引用的B、B引用的C等。
+- ***操作***：快速标记GC Roots直接关联的对象（如虚拟机栈中引用的对象、方法区中类静态变量引用的对象等）。
+- ***特点***：仅标记根对象，不深入追踪引用链，因此停顿时间极短（通常毫秒级）。
+- ***示例***：若根对象为A，则仅标记A，不标记A引用的B、B引用的C等。
 
 **2、并发标记（Concurrent Mark）——并发阶段**
-- 操作：从初始标记的根对象出发，追踪所有可达对象（即遍历整个对象引用链），标记出所有存活对象。
-- 特点：GC线程与用户线程同时运行，不暂停用户线程，因此无STW。
+- ***操作***：从初始标记的根对象出发，追踪所有可达对象（即遍历整个对象引用链），标记出所有存活对象。
+- ***特点***：GC线程与用户线程同时运行，不暂停用户线程，因此无STW。
 - ***注意***：此阶段用户线程可能修改对象引用（如创建新对象，断开引用），会导致部分标记结果不准确（后续阶段修正）。
-- **
+
+**3、重新标记（Remark）——STW阶段
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQwMjA0MTE5LC0xMzY3NjIwMTM4LC0xMj
+eyJoaXN0b3J5IjpbMTk5ODU3MjEwLC0xMzY3NjIwMTM4LC0xMj
 I0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5
 NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MD
 UsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwx
