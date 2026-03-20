@@ -365,8 +365,9 @@ jconsole/jvisualvm：图形化工具，监控内存、线程，支持生成快�
 
 ## 10、简述CMS垃圾收集器的工作流程，它有什么优缺点？
 CMS是一种 ***以最短回收停顿时间为目标的老年代垃圾回收器***，主要应用于对响应时间敏感的场景（如Web应用）。其核心思想是尽可能让垃圾回收与用户线程并发执行，减少STW（Stop The World）时间。
+### 一、CMS工作流程（4个核心阶段）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMzU4MDYyMCwtMTM2NzYyMDEzOCwtMT
+eyJoaXN0b3J5IjpbLTg5Mjk5MTk2MywtMTM2NzYyMDEzOCwtMT
 IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
 OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
 A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
