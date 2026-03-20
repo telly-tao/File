@@ -382,11 +382,12 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 - ***特点***：需要SWT，但停顿时间比初始标记长（但远短于Full GC），通常通过“增量更新”或“原始快照”等算法高效修正。
 
 **4、并发清除（Concurrent Sweep）——并发阶段**
--
+- ***操作***：清除所有未被比标记的对象（即垃圾对象），释放其占用的内存空间。
+- ***特点***：GC线程与用户线程同时运行，无STW；仅清除垃圾，不压缩
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNTA0NTkwNywtMTM2NzYyMDEzOCwtMT
-IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
-OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
-A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
-MTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbMzYyNzQyNDQxLC0xMzY3NjIwMTM4LC0xMj
+I0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5
+NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MD
+UsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwx
+NDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
