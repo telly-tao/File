@@ -298,9 +298,11 @@ JVM会根据Java内存模型（JMM）的规范，***在生成字节码时插入�
 当变量被声明为volatile时，JVM会在其 ***读写操作前后插入内存屏障***：
 （1）写操作（Store）后插入StoreStore屏障和StoreLoad屏障，确保该写操作的结果对其他线程可见（通过刷新缓存），防止写操作被重排序到后面的指令。
 （2）读操作（Load）前插入LoadLoad屏障和LoadStore屏障，确保读取到最新的内存数据（通过失效缓存），防止读操作被重排序到前面的指令。
+![输入图片说明](/imgs/2026-03-20/YSydBfjqdOp5x7lX.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDAxNDcxOTEsMTA0MDk0ODMzLC0xMD
-Q3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAw
-ODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMz
-IsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTE0MzUyNzE4NzYsLTEwMDAxNDcxOTEsMT
+A0MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1
+MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NT
+k1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+
 -->
