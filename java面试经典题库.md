@@ -277,9 +277,11 @@ C1适合短期运行或启动频繁的程序（如桌面应用、工具类程序
 C2适合长期运行额服务（如Web服务器、微服务），通过前期的编译耗时换取长期的执行效率提升。
 **（5）在分层编译中的协作**
 现代JVM（如HotSpot）默认启用分层编译，C1和C2通常配合工作：
-代码先被C1快速编译，保证程序启动并进入优化执行阶段
+代码先被C1快速编译，保证程序启动并进入优化执行阶段；
+若代码持续被频繁调用（热点中的热点），则有C2重新编译，生成更优的机器码，进一步提升性能。
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MzM2Mjk1MCwxMDQwOTQ4MzMsLTEwND
+eyJoaXN0b3J5IjpbLTQ3OTI5NDUzMCwxMDQwOTQ4MzMsLTEwND
 cyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4
 NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMi
 w0MTY5NDM5NTIsLTU5ODg3NTAzMl19
