@@ -296,9 +296,9 @@ JVM会根据Java内存模型（JMM）的规范，***在生成字节码时插入�
 
 **1、volatile关键字的实现**
 当变量被声明为volatile时，JVM会在其 ***读写操作前后插入内存屏障***：
-（1）写操作（）
+（1）写操作（Store）后插入StoreStore屏障和StoreLoad屏障，确保该写操作的结果对其他线程可见（通过刷新缓存），防止写操作被重排序到后面的指令。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjUzMjMxNzUsMTA0MDk0ODMzLC0xMD
+eyJoaXN0b3J5IjpbLTEyOTE3MDc3MjAsMTA0MDk0ODMzLC0xMD
 Q3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAw
 ODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMz
 IsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
