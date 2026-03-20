@@ -377,11 +377,14 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 - ***特点***：GC线程与用户线程同时运行，不暂停用户线程，因此无STW。
 - ***注意***：此阶段用户线程可能修改对象引用（如创建新对象，断开引用），会导致部分标记结果不准确（后续阶段修正）。
 
-**3、重新标记（Remark）——STW阶段
+**3、重新标记（Remark）——STW阶段**
 - ***操作***：修正并发标记阶段因用户操作导致的标记偏差（如“漏标”或“错标”）。
-- ***特点***：需要SWT，但停顿时间比初始标记长（但远短于Full GC），通常通过“增量更新”或
+- ***特点***：需要SWT，但停顿时间比初始标记长（但远短于Full GC），通常通过“增量更新”或“原始快照”等算法高效修正。
+
+**4、并发清除（Concurrent Sweep）——并发阶段**
+-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4MzcwNTk0NCwtMTM2NzYyMDEzOCwtMT
+eyJoaXN0b3J5IjpbMTIwNTA0NTkwNywtMTM2NzYyMDEzOCwtMT
 IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
 OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
 A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
