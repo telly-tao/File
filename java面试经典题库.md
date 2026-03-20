@@ -286,11 +286,13 @@ C2适合长期运行额服务（如Web服务器、微服务），通过前期的
 在多线程环境中，编译器可能会 ***对指令进行重排序以提高性能***，CPU也可能采用乱序执行等优化手段。这些优化在 ***单线程中通常是安全的***，但在多线程场景下，可能导致线程看到的 ***内存状态不一致***，从而 ***引发并发问题***。内存屏障的作用就是阻止特定类型的重排序，确保指令执行的有序性和内存操作的可见性。
 ### 一、内存屏障分类
 根据功能不同，内存屏障通常分为以下几类：
-（1）LoadLoad屏障：确保屏障前的加载指令（Load）先于屏障后的家长指令
+（1）LoadLoad屏障：确保屏障前的加载指令（Load）先于屏障后的家长指令执行。
+（2）StoreStore屏障：确保屏障前的存储指令（Store）先于屏障后的存储指令执行。
+（3）
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MTYwMjYyOCwxMDQwOTQ4MzMsLTEwND
-cyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4
-NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMi
-w0MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbMzIwNzE1NTU2LDEwNDA5NDgzMywtMTA0Nz
+I3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3
+NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLD
+QxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
