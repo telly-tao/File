@@ -388,11 +388,13 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 ### 二、CMS的优缺点
 ***优点***
 （1）停顿时间短：仅初始标记和重新标记需要STW,且总停顿时间短，适合响应时间敏感的场景（如Web服务）。
-（2）并发执行：大部分工作（并发标记、并发清除）
+（2）并发执行：大部分工作（并发标记、并发清除）与用户线程同时进行，不阻塞业务流程。
+***缺点***
+（1）内存碎片严重：采用“标记-清除”算法（并发清除阶段仅删除）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NDA2NDcxOCwtMTM2NzYyMDEzOCwtMT
-IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
-OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
-A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
-MTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbLTE1MjAzNDAxNDQsLTEzNjc2MjAxMzgsLT
+EyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0
+MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1Mj
+kwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1
+LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
