@@ -252,10 +252,11 @@ JIT会对代码进行多种优化，例如：
 **PS：C1和C2编译器有何区别**
 在JVM的分层编译策略中，C1（CLient Compiler）和C2（Server Compiler）是两种不同的即时编译器，它们的设计目标、优化策略和适用场景有显著区别，具体差异如下：
 （1）设计目标不同
-C1编译器：轻量级编译器，以快速编译为核心目标，优先保证编译速度（建松编译开销）
+C1编译器：轻量级编译器，以快速编译为核心目标，优先保证编译速度（建松编译开销），适合启动速度敏感的场景（如客户端应用）。
+C2编译器：重量级编译器，以生成高速优先的机器码为核心目标，编译耗时更长
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTk1NDQyMzUsMTA0MDk0ODMzLC0xMD
-Q3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAw
-ODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMz
-IsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMTg2ODE5ODQ4MCwxMDQwOTQ4MzMsLTEwND
+cyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4
+NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMi
+w0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
