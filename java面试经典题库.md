@@ -360,9 +360,10 @@ jconsole/jvisualvm：图形化工具，监控内存、线程，支持生成快�
 （1）跟风资源使用：及时关闭IO流、数据库连接等资源（使用try-with-resources）。
 （2）合理使用缓存：设置过去时间（如weakHashMap、GuavaCache）。
 （3）避免静态集合滥用：谨慎使用static修饰集合，定期清理无用数据。
-（4）代码评审：重点检查长
+（4）代码评审：重点检查长生命周期对象堆短生命周期对象的引用。
+（5）压力测试：通过压测提取暴露内存泄漏问题（如使用JMeter配合监控工具）。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyOTIyNjA3NiwtMTM2NzYyMDEzOCwtMT
+eyJoaXN0b3J5IjpbMTc3ODIyMDc3OSwtMTM2NzYyMDEzOCwtMT
 IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
 OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
 A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
