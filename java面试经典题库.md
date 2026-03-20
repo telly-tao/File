@@ -178,9 +178,72 @@ JVM根据对象生命周期特点采用分代收集算法，将内存划分为�
  新生代：复制算法
 老年代：标记-整理和复制算法混合
 
-## 06、
+## **06、虚拟机为什么使用元空间代替了永久代**
+
+Java虚拟机（JVM）从JDK8开始使用元空间（Metaspace）代替永久代（PemGen）。这一变化主要从内存管理、性能优化和灵活性等多方面考量。
+
+### **一、永久带的固有问题**
+
+永久代是JVM用于存储类元数据（如类结构、方法信息、常量池等）的内存区域，存在一下核心问题：**1.内存溢出风险**永久代大小固定（默认最大值约64MB－1GB），且需手动通过－XX:PermSize和－XX:MaxPermSize设置，当应用加载大量类（如Spring、Hibernate等框架）时，易触发java.lang.OutOfMemoryError.PermGenspace。**2.垃圾回收效率低**永久代的回收与老年代绑定，且元数据回收逻辑复杂，容易导致Full GC频繁，影响应用响应速度。**3.与JVM耦合过紧**永久代是HotSpot虚拟机特有的设计，其他JVM（如JRockit、J9）并无此区域，不利于Java跨虚拟机统一标准。
+
+### **二、元空间的改进优势**
+
+元空间作为永久代的替代方案，本质是本地内存（Native Memory）的一部分，其设计解决了永久代的诸多痛点。**1.内存动态扩展**元空间默认无固定上限（仅受物理内存限制），无需手动设置大小，避免了永久代的内存溢出问题。JVM会根据类加载情况自动调整元空间大小。**2.垃圾回收更高效**元空间的回收独立于老年代，仅针对无用类（满足类卸载条件）进行回收，减少了Full GC的触发频率，提升了垃圾回收效率。**3.与本地内存结合**元空间使用操作系统的本地内存，避免了JVM内存与本地内存的隔离问题，尤其适合需要加载大量类的场景（如微服务、动态代理生成等）。**4.简化JVM配置**移除了－XX:PermSize等永久代相关参数，仅需通过－XX:MetaspaceSize（初始阈值）和－XX:MaxMetaspaceSize（最大限制，可选）进行简单配置。
+
+### **三、永久代与元空间对比**
+
+维度
+
+永久代（PermGen）
+
+元空间（Metaspace）
+
+**_内存区域_**
+
+JVM堆内存的一部分
+
+本地内存（进程地址空间）
+
+**_限制大小_**
+
+固定大小，需手动配置
+
+动态扩展，默认无上限（受物理内存限制）
+
+**_溢出风险_**
+
+高（易因类过多触发OOM）
+
+低（可通过MaxMetaspace限制）
+
+**_垃圾回收_**
+
+与老年代绑定，效率低
+
+垃圾回收，仅针对无用类
+
+**_跨虚拟机兼容性_**
+
+仅HotSpot支持
+
+所有JVM实现统一支持
+
+## **07、JVM中的即时编译器（JIT）如何工作？**
+
+JVM中的及时编译器（JIT，Just-In-Time Comiler）是Java程序实现高性能的关键组件之一，其工作机制可以概括为一下几个核心环节：**1.解释执行与编译执行的结合**Java程序默认通过解释器（Interpreter）逐行解释字节码执行，启动速度快但执行效率低。JIT编译器则在程序运行工程中，将频繁的热点代码（Hot Code）编译为本地机器码，后续直接执行机器码，大幅提升执行效率，这种“解释执行”+“编译执行”的混合模式，兼顾了Java的跨平台性和高性能。**2.热点代码的识别**JVM通过热点探测器（Hot Spot Detector）识别需要编译的代码，主要依据两个指标：（1）方法调用次数：被多次调用的方法会被标记为热点方法。（2）循环执行次数：循环体内部的代码因重复执行，容易成为热点代码**3.分层编译策略（Tiered Compilation）**现代JVM（如HotSpot）采用分层编译，将编译过程分为多个层次：C1编译器（Client Compiler）：轻量级编译器，编译速度快，针对启动性能优化，生成简单优化的机器码C2编译器（Sever Compiler）：重量级编译器，编译速度慢但优化更彻底（如循环展开、常量传播、空值检查消除等），针对长期运行的应用程序优化。代码先被C1快速编译，运行中若仍被频繁调用，会被C2重新编译为更优的机器码。**4.编译优化技术**JIT会对代码进行多种优化，例如：
+
+<![if !supportLists]>l <![endif]>即时编译优化：方法内联（减少方法调用开销），逃逸分析（栈上分配对象，减少GC压力）
+
+<![if !supportLists]>l <![endif]>循环优化：循环中的不变量 外提，循环展开
+
+<![if !supportLists]>l <![endif]>冗余清除：消除重复计算，无效代码
+
+<![if !supportLists]>l <![endif]>**5.机器码的缓存与失效**
+
+<![if !supportLists]>l <![endif]>编译后的机器码会被缓存，下次执行时直接复用。当代码依赖的类结构发生变化（如动态加载新类），可能导致以编译的机器码失效，此时JVM会重新编译相关的代码。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MD
-Y3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0
-NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbLTEyMDc2MjEyLC02NzU4NjQyNjYsLTU5OT
+g1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5
+NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ
+==
 -->
