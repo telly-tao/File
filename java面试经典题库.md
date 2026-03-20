@@ -269,10 +269,11 @@ C2的优化：支持更复杂、全局的优化，包括：
 预测性优化（如分支预测、空值检查消除）
 
 **（3）编译耗时与执行效率**
-C1编译器速度快（通常毫秒级）
+C1编译器速度快（通常毫秒级），但生成的机器码执行效率中等。
+C2编译器速度慢（可能几十毫秒甚至更长），但生成的机器码执行效率更高（比C1优化的代码）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMTk1ODIxMywxMDQwOTQ4MzMsLTEwND
-cyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4
-NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMi
-w0MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbNTg3MjkxMzEyLDEwNDA5NDgzMywtMTA0Nz
+I3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3
+NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLD
+QxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
