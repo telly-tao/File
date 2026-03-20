@@ -256,11 +256,13 @@ C1编译器：轻量级编译器，以快速编译为核心目标，优先保证
 C2编译器：重量级编译器，以生成高速优先的机器码为核心目标，编译耗时更长但能进行更深度的优化，适合长期运行的服务端应用。
 ***（2）优化深度不同***
 C1的优化：以简单、局部优化为主，包括：
-方法内联（有限度，避免编译耗时过长）、常量传播、
+方法内联（有限度，避免编译耗时过长）
+常量传播、常量折叠
+基本快优化（如分支合并）
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzkwMjk3NDEsMTA0MDk0ODMzLC0xMD
-Q3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAw
-ODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMz
-IsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTM5ODIwOTU2NCwxMDQwOTQ4MzMsLTEwND
+cyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4
+NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMi
+w0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
