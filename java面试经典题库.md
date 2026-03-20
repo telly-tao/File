@@ -230,20 +230,20 @@ Java程序默认通过解释器（Interpreter）逐行解释字节码执行，�
 JVM通过热点探测器（Hot Spot Detector）识别需要编译的代码，主要依据两个指标：（1）方法调用次数：被多次调用的方法会被标记为热点方法。（2）循环执行次数：循环体内部的代码因重复执行，容易成为热点代码
 
 **3.分层编译策略（Tiered Compilation）
-**现代JVM（如HotSpot）采用分层编译，将编译过程分为多个层次：C1编译器（Client Compiler）：轻量级编译器，编译速度快，针对启动性能优化，生成简单优化的机器码C2编译器（Sever Compiler）：重量级编译器，编译速度慢但优化更彻底（如循环展开、常量传播、空值检查消除等），针对长期运行的应用程序优化。代码先被C1快速编译，运行中若仍被频繁调用，会被C2重新编译为更优的机器码。**4.编译优化技术**JIT会对代码进行多种优化，例如：
+**现代JVM（如HotSpot）采用分层编译，将编译过程分为多个层次：C1编译器（Client Compiler）：轻量级编译器，编译速度快，针对启动性能优化，生成简单优化的机器码C2编译器（Sever Compiler）：重量级编译器，编译速度慢但优化更彻底（如循环展开、常量传播、空值检查消除等），针对长期运行的应用程序优化。代码先被C1快速编译，运行中若仍被频繁调用，会被C2重新编译为更优的机器码。
 
-<![if !supportLists]>l <![endif]>即时编译优化：方法内联（减少方法调用开销），逃逸分析（栈上分配对象，减少GC压力）
+**4.编译优化技术**
+JIT会对代码进行多种优化，例如：
+- 即时编译优化：方法内联（减少方法调用开销），逃逸分析（栈上分配对象，减少GC压力）
+- 循环优化：循环中的不变量 外提，循环展开
+- 冗余清除：消除重复计算，无效代码
 
-<![if !supportLists]>l <![endif]>循环优化：循环中的不变量 外提，循环展开
+**5.机器码的缓存与失效**
 
-<![if !supportLists]>l <![endif]>冗余清除：消除重复计算，无效代码
-
-<![if !supportLists]>l <![endif]>**5.机器码的缓存与失效**
-
-<![if !supportLists]>l <![endif]>编译后的机器码会被缓存，下次执行时直接复用。当代码依赖的类结构发生变化（如动态加载新类），可能导致以编译的机器码失效，此时JVM会重新编译相关的代码。
+编译后的机器码会被缓存，下次执行时直接复用。当代码依赖的类结构发生变化（如动态加载新类），可能导致以编译的机器码失效，此时JVM会重新编译相关的代码。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjMxMTcwNDQsLTEwNDcyNzk0MjYsLT
-Y3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3
-ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NT
-IsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbOTEwMjY5NjcxLC0xMDQ3Mjc5NDI2LC02Nz
+U4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5
+NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC
+01OTg4NzUwMzJdfQ==
 -->
