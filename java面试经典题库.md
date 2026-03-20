@@ -274,9 +274,11 @@ C2编译器速度慢（可能几十毫秒甚至更长），但生成的机器码
 
 **（4）使用场景不同**
 C1适合短期运行或启动频繁的程序（如桌面应用、工具类程序），能快速进入高效执行状态。
-C2适合长期运行额服务（如Web服务器、微服务），通过前期的
+C2适合长期运行额服务（如Web服务器、微服务），通过前期的编译耗时换取长期的执行效率提升。
+**（5）在分层编译中的协作**
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MzE1NTMzNCwxMDQwOTQ4MzMsLTEwND
+eyJoaXN0b3J5IjpbMTE5ODYxNzY3NCwxMDQwOTQ4MzMsLTEwND
 cyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4
 NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMi
 w0MTY5NDM5NTIsLTU5ODg3NTAzMl19
