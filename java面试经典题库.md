@@ -314,11 +314,12 @@ JUC（java.util.concurent）中的锁（如ReentranLock）、原子类（如Atom
 4、堆内存使用率随时间呈线性上升趋势
 ### 二、排查与解决步骤
 **1、确认内存泄漏**
-（1）监控JVM内存指标：通过工具观察堆内存各区域（Eden、Survivor、Old Gen）
+（1）监控JVM内存指标：通过工具观察堆内存各区域（Eden、Survivor、Old Gen）的使用趋势，***判断是否存在内存无法释放的情况***。
+（2）分析
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjQwMzcyOTAsLTExNTAyNTAzMjMsLT
-EwMDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4
-NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NT
-c1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01
-OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMzA2MDc1MDgwLC0xMjI0MDM3MjkwLC0xMT
+UwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3
+OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3Ni
+wtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQx
+Njk0Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
