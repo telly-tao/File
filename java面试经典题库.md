@@ -280,10 +280,10 @@ C2适合长期运行额服务（如Web服务器、微服务），通过前期的
 代码先被C1快速编译，保证程序启动并进入优化执行阶段；
 若代码持续被频繁调用（热点中的热点），则有C2重新编译，生成更优的机器码，进一步提升性能。
 ## 08、什么是内存屏障？JVM如何使用内存屏障保证指令执行顺序？
-内存屏障（Memory Barrier）是一种CPU指令
+内存屏障（Memory Barrier）是一种CPU指令或JVM层面的同步机制，用于 ***控制特定指令的执行顺序***，以及 ***保证内存可见性***，防止编译器、CPU的指令
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkzNTIwODY2LDEwNDA5NDgzMywtMTA0Nz
-I3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3
-NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLD
-QxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTEzMTQwMzI4MzksMTA0MDk0ODMzLC0xMD
+Q3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAw
+ODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMz
+IsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
