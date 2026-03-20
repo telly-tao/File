@@ -178,7 +178,7 @@ JVM根据对象生命周期特点采用分代收集算法，将内存划分为�
  新生代：复制算法
 老年代：标记-整理和复制算法混合
 
-## **06、虚拟机为什么使用元空间代替了永久代**
+## 06、虚拟机为什么使用元空间代替了永久代
 
 Java虚拟机（JVM）从JDK8开始使用元空间（Metaspace）代替永久代（PemGen）。这一变化主要从内存管理、性能优化和灵活性等多方面考量。
 
@@ -242,8 +242,8 @@ JVM中的及时编译器（JIT，Just-In-Time Comiler）是Java程序实现高�
 
 <![if !supportLists]>l <![endif]>编译后的机器码会被缓存，下次执行时直接复用。当代码依赖的类结构发生变化（如动态加载新类），可能导致以编译的机器码失效，此时JVM会重新编译相关的代码。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDc2MjEyLC02NzU4NjQyNjYsLTU5OT
-g1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5
-NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ
-==
+eyJoaXN0b3J5IjpbMTM1Mzg5NDQ3NiwtNjc1ODY0MjY2LC01OT
+k4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3
+OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX
+0=
 -->
