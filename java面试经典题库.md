@@ -307,11 +307,13 @@ JVM会根据Java内存模型（JMM）的规范，***在生成字节码时插入�
 JUC（java.util.concurent）中的锁（如ReentranLock）、原子类（如AtomicInteger）等，其内部实现也依赖内存屏障来保证线程安全，例如通过Unsafe类的putOrderedXXX、getAndAddXXX等方法间接使用内存屏障。
 
 ## 09、如何排查和解决JVM内存泄漏问题?有哪些常用的工具和方法？
+
 ### 一、内存泄漏的典型表现
 1、老年代内存持续增长，触发频繁Full GC
 2、GC后的老年代内存释放量很少或不释放
 3、应用响应变慢，最终肯抛出OutOfMemoryError
 4、堆内存使用率随时间呈线性上升趋势
+
 ### 二、排查与解决步骤
 **1、确认内存泄漏**
 （1）监控JVM内存指标：通过工具观察堆内存各区域（Eden、Survivor、Old Gen）的使用趋势，***判断是否存在内存无法释放的情况***。
@@ -333,11 +335,20 @@ jmap -dump:format-b,file=heapdump.hprof <进程ID>
 根据泄漏对象的类型和引用链，找到对应的代码逻辑，常见问题包括：
 （1）静态集合未清理（如staticList不断添加元素）
 （2）未关闭的资源（如数据库连接、IO流）
-（3）线程池核心线程持有
+（3）线程池核心线程持有大对象引用
+（4）缓存未设置过去策略或清理机制
+
+### 三、常用工具
+**1、JDK自带工具**
+jps：查看Java进程ID
+jstat：实时监控JVM内存和GC状态
+```
+jstat -gcutil <进程ID>
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjc2MjAxMzgsLTEyMjQwMzcyOTAsLT
-ExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3
-Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAwOD
-c2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIs
-NDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMTg0MjUyNTYxNSwtMTM2NzYyMDEzOCwtMT
+IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
+OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
+A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
+MTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
