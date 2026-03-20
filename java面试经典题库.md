@@ -302,10 +302,13 @@ JVM会根据Java内存模型（JMM）的规范，***在生成字节码时插入�
 
 **2、synchronized同步块**
 进入synchronized块时，JVM会插入类似LoadLoad、LoadStore的屏障，确保读取到共享变量的最新值；退出synchronized块时，会插入类似StoreStore、StoreLoad的屏障，确保当前线程的修改被其他线程可见。
+
+**3、锁并发工具类**
+JUC（java。util）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgzODA3NTIwLC0xMTUwMjUwMzIzLC0xMD
-AwMTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0
-MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NS
-wtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4
-ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbMjA3MTc3Nzc4NCwtMTE1MDI1MDMyMywtMT
+AwMDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2
+NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1Nz
+UsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5
+ODg3NTAzMl19
 -->
