@@ -362,8 +362,11 @@ jconsole/jvisualvm：图形化工具，监控内存、线程，支持生成快�
 （3）避免静态集合滥用：谨慎使用static修饰集合，定期清理无用数据。
 （4）代码评审：重点检查长生命周期对象堆短生命周期对象的引用。
 （5）压力测试：通过压测提取暴露内存泄漏问题（如使用JMeter配合监控工具）。
+
+## 10、简述CMS垃圾收集器的工作流程，它有什么优缺点？
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3ODIyMDc3OSwtMTM2NzYyMDEzOCwtMT
+eyJoaXN0b3J5IjpbMTAxMDg1NjA4MiwtMTM2NzYyMDEzOCwtMT
 IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
 OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
 A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
