@@ -261,11 +261,14 @@ C1的优化：以简单、局部优化为主，包括：
 基本快优化（如分支合并）
 消除冗余操作（如重复计算）
 C2的优化：支持更复杂、全局的优化，包括：
-深度方法
+深度方法内联（夸多层调用）
+循环优化（循环展开、循环不变量外提、循环剥离）
+逃逸分析语栈上分配（减少堆内存分配）
+寄存器分配
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjgwODEyOTksMTA0MDk0ODMzLC0xMD
-Q3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAw
-ODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMz
-IsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMTQzOTk5OTIxOSwxMDQwOTQ4MzMsLTEwND
+cyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4
+NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMi
+w0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
