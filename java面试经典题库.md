@@ -313,9 +313,10 @@ JUC（java.util.concurent）中的锁（如ReentranLock）、原子类（如Atom
 3、应用响应变慢，最终肯抛出OutOfMemoryError
 4、堆内存使用率随时间呈线性上升趋势
 ### 二、排查与解决步骤
-**
+**1、确认内存泄漏**
+（1）监控JVM内存指标：通过工具观察堆内存各区域（Eden、Survivor）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NjQxODI1NiwtMTE1MDI1MDMyMywtMT
+eyJoaXN0b3J5IjpbMTA4NDQ1NjI4OCwtMTE1MDI1MDMyMywtMT
 AwMDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2
 NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1Nz
 UsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5
