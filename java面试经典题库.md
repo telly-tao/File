@@ -298,13 +298,14 @@ JVM会根据Java内存模型（JMM）的规范，***在生成字节码时插入�
 当变量被声明为volatile时，JVM会在其 ***读写操作前后插入内存屏障***：
 （1）写操作（Store）后插入StoreStore屏障和StoreLoad屏障，确保该写操作的结果对其他线程可见（通过刷新缓存），防止写操作被重排序到后面的指令。
 （2）读操作（Load）前插入LoadLoad屏障和LoadStore屏障，确保读取到最新的内存数据（通过失效缓存），防止读操作被重排序到前面的指令。![输入图片说明](/imgs/2026-03-20/LRrODofcFrvAzH6p.png)
-如果不加volatile 当线程1将flag修改为true时，线程2
+如果不加volatile 当线程1将flag修改为true时，线程2的flag可能还是false。
+
 **2、synchronized同步块**
 进入synchronized块时，JVM会插入类似LoadLoad、LoadStore的屏障，确保读取到共享变量的最新值；退出synchronized块时，会插入类似StoreStore、StoreLoad的屏障，确保当前线程的修改被其他线程可见。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5OTI5NzU4NCwtMTE1MDI1MDMyMywtMT
-AwMDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2
-NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1Nz
-UsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5
-ODg3NTAzMl19
+eyJoaXN0b3J5IjpbOTgzODA3NTIwLC0xMTUwMjUwMzIzLC0xMD
+AwMTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0
+MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NS
+wtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4
+ODc1MDMyXX0=
 -->
