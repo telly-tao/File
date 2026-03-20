@@ -392,11 +392,12 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 ***缺点***
 （1）***内存碎片严重***：采用“标记-清除”算法（并发清除阶段仅删除垃圾，不压缩内存）,长期运行会产生大量内存碎片，可能导致大对象无法分配内存，触发Full GC。
 （2）***占用CPU资源***：并发阶段GC线程与用户线程共享CPU，若CPU核心较少（如2核），可能导致用户线程执行效率下降（GC线程会抢占CPU空间）。
-（3）***需要预留内存***：并发清除阶段用户线程仍在分配内存，若老年代剩余空间不足，会触发“Concurrent Mode Failure”，此时需临时启用Serial OL
+（3）***需要预留内存***：并发清除阶段用户线程仍在分配内存，若老年代剩余空间不足，会触发“Concurrent Mode Failure”，此时需临时启用Serial Old收集器（STW时间极长）。
+（4）***产生浮动垃圾***：并发标记阶段后
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5ODc5MTcwMywtMTM2NzYyMDEzOCwtMT
-IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
-OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
-A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
-MTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbOTYxNjE4OTgxLC0xMzY3NjIwMTM4LC0xMj
+I0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5
+NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MD
+UsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwx
+NDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
