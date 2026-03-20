@@ -315,11 +315,13 @@ JUC（java.util.concurent）中的锁（如ReentranLock）、原子类（如Atom
 ### 二、排查与解决步骤
 **1、确认内存泄漏**
 （1）监控JVM内存指标：通过工具观察堆内存各区域（Eden、Survivor、Old Gen）的使用趋势，***判断是否存在内存无法释放的情况***。
-（2）分析GC日志：开启GC日志（-XX:+PrintGCDetails  -XX:+PrintGCTimeStamps），查看Full GC频率、耗时及内存释放情况。若Full GC后老年代内存占用仍
+（2）分析GC日志：开启GC日志（-XX:+PrintGCDetails  -XX:+PrintGCTimeStamps），查看Full GC频率、耗时及内存释放情况。若Full GC后老年代内存占用仍很高，可能存在泄漏。
+**2、捕获内存快照**
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMjYzMjA4OSwtMTIyNDAzNzI5MCwtMT
-E1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcy
-Nzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4Nz
-YsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0
-MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbLTIwMTI3OTMxMTQsLTEyMjQwMzcyOTAsLT
+ExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3
+Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAwOD
+c2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIs
+NDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
