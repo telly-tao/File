@@ -347,10 +347,10 @@ jstat -gcutil <进程ID> 1000 10  # 每1秒输出1次，共10次
 ```
 jmap：生成堆快照，查看对象分布
 ```
-jmap -histo <
+jmap -histo <进程ID> #查看对象数量和大小
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNDE2MDA1OCwtMTM2NzYyMDEzOCwtMT
+eyJoaXN0b3J5IjpbMTUxNDIwMDg0MywtMTM2NzYyMDEzOCwtMT
 IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
 OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
 A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
