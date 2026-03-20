@@ -371,9 +371,11 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 操作：快速标记GC Roots直接关联的对象（如虚拟机栈中引用的对象、方法区中类静态变量引用的对象等）。
 特点：仅标记根对象，不深入追踪引用链，因此停顿时间极短（通常毫秒级）。
 示例：若根对象为A，则仅标记A，不标记A引用的B、B引用的C等。
-**2、并发标记（Concurrent Mark）
+**2、并发标记（Concurrent Mark）——并发阶段**
+操作：从初始标记的根对象出发，追踪所有可达对象（即遍历整个对象引用链），标记出所有存活对象。
+特点
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwOTcwMTE5NSwtMTM2NzYyMDEzOCwtMT
+eyJoaXN0b3J5IjpbLTUzMjMwOTc5OSwtMTM2NzYyMDEzOCwtMT
 IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
 OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
 A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
