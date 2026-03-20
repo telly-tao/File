@@ -354,11 +354,14 @@ jconsole/jvisualvm：图形化工具，监控内存、线程，支持生成快�
 **2、第三方分析工具**
 - MAT（Eclipse Memory Analyzer）：强大的堆快照分析工具，可自动检测泄漏疑点（Leak Suspects）,展示支配树和引用链。
 - VisualVM插件：如Visual GC插件，直观展示GC区域变化趋势。
-- YourKit/JProfiler：商业工具，提供
+- YourKit/JProfiler：商业工具，提供内存泄漏检测、CPU分析等功能，支持实时跟踪对象创建和销毁。
+
+### 四、预防措施
+（1）跟风资源使用：及时关闭
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzQ3NTgxMzgsLTEzNjc2MjAxMzgsLT
-EyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0
-MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1Mj
-kwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1
-LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbLTcxMjIwMjQ2NCwtMTM2NzYyMDEzOCwtMT
+IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
+OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
+A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
+MTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
