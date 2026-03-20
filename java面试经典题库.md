@@ -250,9 +250,9 @@ JIT会对代码进行多种优化，例如：
 编译后的机器码会被缓存，下次执行时直接复用。当代码依赖的类结构发生变化（如动态加载新类），可能导致以编译的机器码失效，此时JVM会重新编译相关的代码。
 
 **PS：C1和C2编译器有何区别**
-在JVM的分层编译
+在JVM的分层编译策略中，C1（CLient Compiler）和C2（Server Compiler）是两种不同的即时编译器
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0NjAwNDg4MSwxMDQwOTQ4MzMsLTEwND
+eyJoaXN0b3J5IjpbLTU2MzgyMzEyMSwxMDQwOTQ4MzMsLTEwND
 cyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4
 NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMi
 w0MTY5NDM5NTIsLTU5ODg3NTAzMl19
