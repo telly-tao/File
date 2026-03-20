@@ -390,9 +390,10 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 （1）停顿时间短：仅初始标记和重新标记需要STW,且总停顿时间短，适合响应时间敏感的场景（如Web服务）。
 （2）并发执行：大部分工作（并发标记、并发清除）与用户线程同时进行，不阻塞业务流程。
 ***缺点***
-（1）内存碎片严重：采用“标记-清除”算法（并发清除阶段仅删除）
+（1）内存碎片严重：采用“标记-清除”算法（并发清除阶段仅删除垃圾，不压缩内存）,长期运行会产生大量内存碎片，可能导致大对象无法分配内存，触发Full GC。
+（2）占用CPU资源：
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MjAzNDAxNDQsLTEzNjc2MjAxMzgsLT
+eyJoaXN0b3J5IjpbLTE5MzQzMTI2MDQsLTEzNjc2MjAxMzgsLT
 EyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0
 MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1Mj
 kwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1
