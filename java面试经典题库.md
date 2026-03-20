@@ -217,22 +217,20 @@ Java虚拟机（JVM）从JDK8开始使用元空间（Metaspace）代替永久代
 |**_内存区域_**|JVM堆内存的一部分|本地内存（进程地址空间）|
 |**_限制大小_**|固定大小，需手动配置|动态扩展，默认无上限（受物理内存限制）|
 |**_溢出风险_**|高（易因类过多触发OOM）|低（可通过MaxMetaspace限制）|
+|**_垃圾回收_**|与老年代绑定，效率低|垃圾回收，仅针对无用类|
+|**_跨虚拟机兼容性_**|仅HotSpot支持|所有JVM实现统一支持|
 
-|**_垃圾回收_**
+## 07、JVM中的即时编译器（JIT）如何工作？
 
-与老年代绑定，效率低
+JVM中的及时编译器（JIT，Just-In-Time Comiler）是Java程序实现高性能的关键组件之一，其工作机制可以概括为一下几个核心环节：
+**1.解释执行与编译执行的结合**
+Java程序默认通过解释器（Interpreter）逐行解释字节码执行，启动速度快但执行效率低。JIT编译器则在程序运行工程中，将频繁的热点代码（Hot Code）编译为本地机器码，后续直接执行机器码，大幅提升执行效率，这种“解释执行”+“编译执行”的混合模式，兼顾了Java的跨平台性和高性能。
 
-垃圾回收，仅针对无用类
+**2.热点代码的识别**
+JVM通过热点探测器（Hot Spot Detector）识别需要编译的代码，主要依据两个指标：（1）方法调用次数：被多次调用的方法会被标记为热点方法。（2）循环执行次数：循环体内部的代码因重复执行，容易成为热点代码
 
-**_跨虚拟机兼容性_**
-
-仅HotSpot支持
-
-所有JVM实现统一支持
-
-## **07、JVM中的即时编译器（JIT）如何工作？**
-
-JVM中的及时编译器（JIT，Just-In-Time Comiler）是Java程序实现高性能的关键组件之一，其工作机制可以概括为一下几个核心环节：**1.解释执行与编译执行的结合**Java程序默认通过解释器（Interpreter）逐行解释字节码执行，启动速度快但执行效率低。JIT编译器则在程序运行工程中，将频繁的热点代码（Hot Code）编译为本地机器码，后续直接执行机器码，大幅提升执行效率，这种“解释执行”+“编译执行”的混合模式，兼顾了Java的跨平台性和高性能。**2.热点代码的识别**JVM通过热点探测器（Hot Spot Detector）识别需要编译的代码，主要依据两个指标：（1）方法调用次数：被多次调用的方法会被标记为热点方法。（2）循环执行次数：循环体内部的代码因重复执行，容易成为热点代码**3.分层编译策略（Tiered Compilation）**现代JVM（如HotSpot）采用分层编译，将编译过程分为多个层次：C1编译器（Client Compiler）：轻量级编译器，编译速度快，针对启动性能优化，生成简单优化的机器码C2编译器（Sever Compiler）：重量级编译器，编译速度慢但优化更彻底（如循环展开、常量传播、空值检查消除等），针对长期运行的应用程序优化。代码先被C1快速编译，运行中若仍被频繁调用，会被C2重新编译为更优的机器码。**4.编译优化技术**JIT会对代码进行多种优化，例如：
+**3.分层编译策略（Tiered Compilation）
+**现代JVM（如HotSpot）采用分层编译，将编译过程分为多个层次：C1编译器（Client Compiler）：轻量级编译器，编译速度快，针对启动性能优化，生成简单优化的机器码C2编译器（Sever Compiler）：重量级编译器，编译速度慢但优化更彻底（如循环展开、常量传播、空值检查消除等），针对长期运行的应用程序优化。代码先被C1快速编译，运行中若仍被频繁调用，会被C2重新编译为更优的机器码。**4.编译优化技术**JIT会对代码进行多种优化，例如：
 
 <![if !supportLists]>l <![endif]>即时编译优化：方法内联（减少方法调用开销），逃逸分析（栈上分配对象，减少GC压力）
 
@@ -244,8 +242,8 @@ JVM中的及时编译器（JIT，Just-In-Time Comiler）是Java程序实现高�
 
 <![if !supportLists]>l <![endif]>编译后的机器码会被缓存，下次执行时直接复用。当代码依赖的类结构发生变化（如动态加载新类），可能导致以编译的机器码失效，此时JVM会重新编译相关的代码。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxNDUzODU3MiwtMTA0NzI3OTQyNiwtNj
-c1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4
-OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1Mi
-wtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTE4MjMxMTcwNDQsLTEwNDcyNzk0MjYsLT
+Y3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3
+ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NT
+IsLTU5ODg3NTAzMl19
 -->
