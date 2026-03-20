@@ -270,9 +270,12 @@ C2的优化：支持更复杂、全局的优化，包括：
 
 **（3）编译耗时与执行效率**
 C1编译器速度快（通常毫秒级），但生成的机器码执行效率中等。
-C2编译器速度慢（可能几十毫秒甚至更长），但生成的机器码执行效率更高（比C1优化的代码）
+C2编译器速度慢（可能几十毫秒甚至更长），但生成的机器码执行效率更高（比C1优化的代码快30%-50%）。
+
+**（4）使用场景不同**
+C1适合短期运行或启动频繁的程序（如桌面应用、工具类程序），通过前期的免疫
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg3MjkxMzEyLDEwNDA5NDgzMywtMTA0Nz
+eyJoaXN0b3J5IjpbMjM0MTM5MTE1LDEwNDA5NDgzMywtMTA0Nz
 I3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3
 NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLD
 QxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
