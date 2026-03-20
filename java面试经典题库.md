@@ -352,11 +352,12 @@ jmap -histo <进程ID> #查看对象数量和大小
 jconsole/jvisualvm：图形化工具，监控内存、线程，支持生成快照和分析
 ![输入图片说明](/imgs/2026-03-20/A8xfWBJtQPLSoXmn.png)
 **2、第三方分析工具**
-MAT（Eclipse Memory Analyzer）：强大的堆快照
+- MAT（Eclipse Memory Analyzer）：强大的堆快照分析工具，可自动检测泄漏疑点（Leak Suspects）,展示支配树和引用链。
+- VisualVM
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU0MjY4MDQwLC0xMzY3NjIwMTM4LC0xMj
-I0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5
-NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MD
-UsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwx
-NDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTkyMzczNzQ0NSwtMTM2NzYyMDEzOCwtMT
+IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
+OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
+A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
+MTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
