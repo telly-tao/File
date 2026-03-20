@@ -323,12 +323,14 @@ JUC（java.util.concurent）中的锁（如ReentranLock）、原子类（如Atom
 jmap -dump:format-b,file=heapdump.hprof <进程ID>
 
 #当OOM时自动生成快照
--XX:+He
+-XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumoPath=/path/to/dump
 ```
+**分析快照**
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMjIwNDgxMiwtMTIyNDAzNzI5MCwtMT
-E1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcy
-Nzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4Nz
-YsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0
-MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbNDcxNDQ0NTk5LC0xMjI0MDM3MjkwLC0xMT
+UwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3
+OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3Ni
+wtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQx
+Njk0Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
