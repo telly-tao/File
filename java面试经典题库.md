@@ -309,11 +309,13 @@ JUC（java.util.concurent）中的锁（如ReentranLock）、原子类（如Atom
 ## 09、如何排查和解决JVM内存泄漏问题?有哪些常用的工具和方法？
 ### 一、内存泄漏的典型表现
 1、老年代内存持续增长，触发频繁Full GC
-2、GC后的老年代内存释放很少或不释放
+2、GC后的老年代内存释放量很少或不释放
 3、应用响应变慢，最终肯抛出OutOfMemoryError
 4、堆内存使用率随时间呈线性上升趋势
+### 二、排查与解决步骤
+**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzOTk0MTUwMywtMTE1MDI1MDMyMywtMT
+eyJoaXN0b3J5IjpbMjA0NjQxODI1NiwtMTE1MDI1MDMyMywtMT
 AwMDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2
 NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1Nz
 UsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5
