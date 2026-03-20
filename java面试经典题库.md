@@ -325,12 +325,14 @@ jmap -dump:format-b,file=heapdump.hprof <进程ID>
 #当OOM时自动生成快照
 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumoPath=/path/to/dump
 ```
-**分析快照**
+**分析内存快照**
+通过工具分析快照，定位泄漏对象：
+识别异常对象：产看哪些对象侍郎异常多，且生命周期不应过长（如频繁创建单未释放的对象）。
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcxNDQ0NTk5LC0xMjI0MDM3MjkwLC0xMT
-UwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3
-OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3Ni
-wtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQx
-Njk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTE2Nzk0NDgzMzEsLTEyMjQwMzcyOTAsLT
+ExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3
+Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAwOD
+c2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIs
+NDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
