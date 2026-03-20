@@ -212,15 +212,9 @@ Java虚拟机（JVM）从JDK8开始使用元空间（Metaspace）代替永久代
 
 ### 三、永久代与元空间对比
 
-维度
-永久代（PermGen）
-元空间（Metaspace）
-
-**_内存区域_**
-
-JVM堆内存的一部分
-
-本地内存（进程地址空间）
+|      维度    | 永久代（PermGen）|元空间（Metaspace）|
+|--------------|----|--------|
+|**_内存区域_**|JVM堆内存的一部分|本地内存（进程地址空间）|
 
 **_限制大小_**
 
@@ -260,8 +254,8 @@ JVM中的及时编译器（JIT，Just-In-Time Comiler）是Java程序实现高�
 
 <![if !supportLists]>l <![endif]>编译后的机器码会被缓存，下次执行时直接复用。当代码依赖的类结构发生变化（如动态加载新类），可能导致以编译的机器码失效，此时JVM会重新编译相关的代码。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQwNDQ0MDU4LC02NzU4NjQyNjYsLTU5OT
-g1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5
-NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ
-==
+eyJoaXN0b3J5IjpbMTY1MTMzOTQyMiwtNjc1ODY0MjY2LC01OT
+k4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3
+OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX
+0=
 -->
