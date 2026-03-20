@@ -368,11 +368,12 @@ CMS是一种 ***以最短回收停顿时间为目标的老年代垃圾回收器*
 ### 一、CMS工作流程（4个核心阶段）
 CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户线程（STW），其余阶段与用户线程并发执行。流程如下：
 **1、初始标记（Initial Mark）——STW阶段**
-操作：快速标记GC Roots直接关联的对象（如虚拟机栈中引用的对象、方法区）
+操作：快速标记GC Roots直接关联的对象（如虚拟机栈中引用的对象、方法区中类静态变量引用的对象等）。
+特点：仅标记根对象，不深入追踪引用链，因此停顿时间极短（通常毫秒级）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTk1OTE2NDIsLTEzNjc2MjAxMzgsLT
-EyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0
-MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1Mj
-kwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1
-LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMTI1MjEwMzE5LC0xMzY3NjIwMTM4LC0xMj
+I0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5
+NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MD
+UsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwx
+NDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
