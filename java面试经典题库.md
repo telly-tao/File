@@ -182,9 +182,16 @@ JVM根据对象生命周期特点采用分代收集算法，将内存划分为�
 
 Java虚拟机（JVM）从JDK8开始使用元空间（Metaspace）代替永久代（PemGen）。这一变化主要从内存管理、性能优化和灵活性等多方面考量。
 
-### **一、永久带的固有问题**
+### 一、永久带的固有问题
 
-永久代是JVM用于存储类元数据（如类结构、方法信息、常量池等）的内存区域，存在一下核心问题：**1.内存溢出风险**永久代大小固定（默认最大值约64MB－1GB），且需手动通过－XX:PermSize和－XX:MaxPermSize设置，当应用加载大量类（如Spring、Hibernate等框架）时，易触发java.lang.OutOfMemoryError.PermGenspace。**2.垃圾回收效率低**永久代的回收与老年代绑定，且元数据回收逻辑复杂，容易导致Full GC频繁，影响应用响应速度。**3.与JVM耦合过紧**永久代是HotSpot虚拟机特有的设计，其他JVM（如JRockit、J9）并无此区域，不利于Java跨虚拟机统一标准。
+永久代是JVM用于存储类元数据（如类结构、方法信息、常量池等）的内存区域，存在一下核心问题：
+**1.内存溢出风险**
+永久代大小固定（默认最大值约64MB－1GB），且需手动通过－XX:PermSize和－XX:MaxPermSize设置，当应用加载大量类（如Spring、Hibernate等框架）时，易触发java.lang.OutOfMemoryError.PermGenspace。
+
+**2.垃圾回收效率低** 
+永久代的回收与老年代绑定，且元数据回收逻辑复杂，容易导致Full GC频繁，影响应用响应速度。
+
+**3.与JVM耦合过紧**永久代是HotSpot虚拟机特有的设计，其他JVM（如JRockit、J9）并无此区域，不利于Java跨虚拟机统一标准。
 
 ### **二、元空间的改进优势**
 
@@ -242,8 +249,8 @@ JVM中的及时编译器（JIT，Just-In-Time Comiler）是Java程序实现高�
 
 <![if !supportLists]>l <![endif]>编译后的机器码会被缓存，下次执行时直接复用。当代码依赖的类结构发生变化（如动态加载新类），可能导致以编译的机器码失效，此时JVM会重新编译相关的代码。
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1Mzg5NDQ3NiwtNjc1ODY0MjY2LC01OT
-k4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3
-OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX
-0=
+eyJoaXN0b3J5IjpbNDQ5MDA5NzY0LC02NzU4NjQyNjYsLTU5OT
+g1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5
+NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ
+==
 -->
