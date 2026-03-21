@@ -403,11 +403,15 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 4、反射调用：使用java.lang.refflect包方法对类进行反射调用时
 5、父类初始化：初始化子类时，如果父类尚未初始化，会先触发父类初始化
 6、主类初始化：虚拟机启动时指定的包含main()方法的主类
-### 
+### 二、类加载过程
+类加载是类声明周期的一部分，包括以下阶段：
+1、加载：查找并加载.class文件
+2、验证：确保字节码正确性
+3、
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc4MTIxMDMxLC0xMzY3NjIwMTM4LC0xMj
-I0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5
-NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MD
-UsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwx
-NDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbMTA4NzQ5NjI2NCwtMTM2NzYyMDEzOCwtMT
+IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
+OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
+A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
+MTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
