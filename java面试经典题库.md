@@ -404,14 +404,15 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 5、父类初始化：初始化子类时，如果父类尚未初始化，会先触发父类初始化
 6、主类初始化：虚拟机启动时指定的包含main()方法的主类
 ### 二、类加载过程
-类加载是类声明周期的一部分，包括以下阶段：
+类加载是类生命周期的一部分，包括以下阶段：
 1、加载：查找并加载.class文件
 2、验证：确保字节码正确性
-3、
+3、准备：为静态变量分配内存并设置默认值
+4、初始化：执行类构造器<clinit>()方法
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NzQ5NjI2NCwtMTM2NzYyMDEzOCwtMT
-IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
-OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
-A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
-MTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbLTExOTYxODY5ODUsLTEzNjc2MjAxMzgsLT
+EyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0
+MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1Mj
+kwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1
+LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
