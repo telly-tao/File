@@ -475,9 +475,10 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 
 ## 14、如何调优JVM参数以提高应用性能？请举例说明常用的调优参数及作用
 ### 一、堆内存配置
--Xms/-Xmx：设置初始和最大堆内存（建议）
+-Xms/-Xmx：设置初始和最大堆内存（建议设为相同的值避免动态调整），如-Xms4g -Xmx4g
+-Xmn：指定新生代大小（建议占堆1/3~1）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjE1OTA4NzksLTExOTYxODY5ODUsLT
+eyJoaXN0b3J5IjpbLTE2ODQwMTcxOTAsLTExOTYxODY5ODUsLT
 EzNjc2MjAxMzgsLTEyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEw
 MDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4Nj
 QyNjYsLTU5OTg1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1
