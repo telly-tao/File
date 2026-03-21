@@ -456,9 +456,10 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 |GC影响|受JVM垃圾回收器管理，GC时会暂停应用程序（STW）|不受GC管理，GC时不会暂停应用程序|
 |I/O效率|进行I/O操作是需要额外进行一次内存拷贝（堆-->直接内存）|直接与操作系统进行数据传输，避免了内存拷贝|
 |分配方式|通过new关键字或反射等方式分配|通常通过ByteBuffer.allocateDirect()或Unsafe分配|
-|内存限制|受先于JVM启动参数（如-）
+|内存限制|受先于JVM启动参数（如-Xmx）设置的堆大小|受限于本机总内存和操作系统寻址空间|
+|安全性|相对安全，GC机制可有效防止内存泄漏
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MzQ3MjgwNSwtMTE5NjE4Njk4NSwtMT
+eyJoaXN0b3J5IjpbLTMyNzY2MjAxNywtMTE5NjE4Njk4NSwtMT
 M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
 MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
 I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
