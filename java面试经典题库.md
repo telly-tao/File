@@ -441,12 +441,12 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 通过-Xss参数增大栈内存（如-Xss256k），但需要权衡内存资源。
 4、代码审查与测试
 使用静态分许工具检查潜在无限递归或深层调用。
-压力测试模拟高并发场景，验证栈容量是否
+压力测试模拟高并发场景，验证栈容量是否充足。
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyOTUwMTM2MiwtMTE5NjE4Njk4NSwtMT
+eyJoaXN0b3J5IjpbLTM0NjQyODY3MCwtMTE5NjE4Njk4NSwtMT
 M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
 MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
 I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
