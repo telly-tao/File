@@ -450,12 +450,14 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 直接内存（Direct Memory）是Java中一种 ***特殊的内存分配方式***，它不是有Java虚拟机（JVM）直接管理，而是通过Java代码 ***直接向操作系统申请的内存区域***。这部分内存位于JVM堆外，因此也被称为“ ***堆外内存***”（Off-Heap Memory）。
 直接内存主要通过Java NIO（New I/O）中的ByteBuffer类来操作，特别是通过ByteBuffer.allocateDirect()方法分配。它不属于JVM堆的一部分，但能显著提升数据传输效率，***减少内存拷贝和GC压力***。
 ### 二、直接内存与堆内存的区别
-|          特性     |  堆内存（Heap Memory）| 直接内存（Direct Memory）|
+| 特性|  堆内存（Heap Memory）| 直接内存（Direct Memory）|
+|----------|----------|----------|
+|管理方式|由JVM管理，是Java对象的主要存储
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDAzOTEzNzIsLTExOTYxODY5ODUsLT
-EzNjc2MjAxMzgsLTEyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEw
-MDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4Nj
-QyNjYsLTU5OTg1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1
-LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OT
-g4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMTc3MzA5OTAyOSwtMTE5NjE4Njk4NSwtMT
+M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
+MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
+I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
+LTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5OD
+g3NTAzMl19
 -->
