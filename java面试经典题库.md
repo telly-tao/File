@@ -447,13 +447,13 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 
 ## 13、什么是直接内存？他与堆内存有何区别？如何管理直接内存？
 ### 一、什么是直接内存？
-直接内存（Direct Memory）是Java中一种特殊的
+直接内存（Direct Memory）是Java中一种 ***特殊的内存分配方式***，它不是有Java虚拟机（JVM）直接管理，而是通过Java代码 ******
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MTMwNDY5NiwtMTE5NjE4Njk4NSwtMT
-M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
-MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
-I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
-LTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbNzU0NTA3MjUzLC0xMTk2MTg2OTg1LC0xMz
+Y3NjIwMTM4LC0xMjI0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAw
+MTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0Mj
+Y2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwt
+MTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4OD
+c1MDMyXX0=
 -->
