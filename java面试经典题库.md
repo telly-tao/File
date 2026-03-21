@@ -394,10 +394,12 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 （2）***占用CPU资源***：并发阶段GC线程与用户线程共享CPU，若CPU核心较少（如2核），可能导致用户线程执行效率下降（GC线程会抢占CPU空间）。
 （3）***需要预留内存***：并发清除阶段用户线程仍在分配内存，若老年代剩余空间不足，会触发“Concurrent Mode Failure”，此时需临时启用Serial Old收集器（STW时间极长）。
 （4）***产生浮动垃圾***：并发标记阶段后新产生的垃圾（如用户线程新建的对象）无法被本次回收，只能留到下次GC，因此需要预留更多内存容纳浮动垃圾。
+
+## 11、
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTgwMTIxLC0xMzY3NjIwMTM4LC0xMj
-I0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5
-NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MD
-UsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwx
-NDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbMTAwMTg3NjQ2OCwtMTM2NzYyMDEzOCwtMT
+IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
+OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
+A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
+MTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5ODg3NTAzMl19
 -->
