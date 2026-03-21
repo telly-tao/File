@@ -401,9 +401,11 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 2、静态字段访问：读取或设置类的静态字段（被final修饰且已在编译期放入常量池的静态字段除外）时
 3、静态方法调用：调用类的静态方法时
 4、反射调用：使用java.lang.refflect包方法对类进行反射调用时
-5、父类初始化：初始化子类时，如果父类尚未
+5、父类初始化：初始化子类时，如果父类尚未初始化，会先触发父类初始化
+6、主类初始化：虚拟机启动时指定的包含main()方法的主类
+### 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MzcwMzU4LC0xMzY3NjIwMTM4LC0xMj
+eyJoaXN0b3J5IjpbNTc4MTIxMDMxLC0xMzY3NjIwMTM4LC0xMj
 I0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5
 NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MD
 UsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwx
