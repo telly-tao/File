@@ -398,11 +398,12 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 ## 11、什么是类的初始化时机？类加载和类初始化有什么区别？
 ### 一、 Java虚拟机规范严格规定了有且只有以下6种情况必须立即对类进行初始化。
 1、new指令：使用new关键字实例化对象时
-2、
+2、静态字段访问：读取或设置类的静态字段（被final修饰且已在编译期放入常量池的静态字段除外）时
+3、静态方法调用：调用类的静态
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYxODEzODQyLC0xMzY3NjIwMTM4LC0xMj
-I0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5
-NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MD
-UsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwx
-NDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTEyODg3MjYxMDAsLTEzNjc2MjAxMzgsLT
+EyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0
+MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1Mj
+kwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1
+LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
