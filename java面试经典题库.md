@@ -463,12 +463,14 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 ### 三、如何管理直接内存
 1、分配方式：主要通过ByteBuffer.allocateDirect()方法分配，底层实际上是通过Unsafe类的allocateMemory方法或者操作系统本地API（如mmap）来实现。
 2、回收机制
-直接内存不受JVM垃圾回收器管理，需手动释放。可通过Cleaner机制进行回收
+直接内存不受JVM垃圾回收器管理，需手动释放，可通过Cleaner机制进行回收。不正确的使用可能导致内存泄漏，最终耗尽系统内存
+3、使用示例
+![输入图片说明](/imgs/2026-03-21/tEtxTgqCkjHzzhua.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDY3Njk1NzUsLTExOTYxODY5ODUsLT
-EzNjc2MjAxMzgsLTEyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEw
-MDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4Nj
-QyNjYsLTU5OTg1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1
-LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OT
-g4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMjAyNjIzODYwMywtMTE5NjE4Njk4NSwtMT
+M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
+MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
+I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
+LTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5OD
+g3NTAzMl19
 -->
