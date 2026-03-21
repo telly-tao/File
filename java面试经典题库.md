@@ -492,14 +492,16 @@ OOM自动转储：-XX:+HeapDumoOnOutOfMemoryError
 线程栈大小：-Xss256k（减少线程内存占用）
 
 ###  四、调优案例实践
-电商系统优化：通过-Xmx12g -XX:+UseG1GC将Full GC频率从每小时5次降低到每天1次
-Tomcat调优：调整-Xms120m -Xms120m使Full GC次数降低80%
-内存泄漏处理：
+- 电商系统优化：通过-Xmx12g -XX:+UseG1GC将Full GC频率从每小时5次降低到每天1次
+- Tomcat调优：调整-Xms120m -Xms120m使Full GC次数降低80%
+- 内存泄漏处理：哟个WeakReference优化缓存设计避免OOM
+
+调优需结合监控工具（如jstat/jmap）分析GC日志，
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI5NzQ1MjMxLC0xOTk2MjE2MzcyLC0xMT
-k2MTg2OTg1LC0xMzY3NjIwMTM4LC0xMjI0MDM3MjkwLC0xMTUw
-MjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OT
-QyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3Niwt
-MTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNj
-k0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbLTExNzA2Njk5NTUsLTE5OTYyMTYzNzIsLT
+ExOTYxODY5ODUsLTEzNjc2MjAxMzgsLTEyMjQwMzcyOTAsLTEx
+NTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3Mj
+c5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwtOTA2NzAwODc2
+LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsND
+E2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
