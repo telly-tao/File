@@ -461,12 +461,14 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 |安全性|相对安全，GC机制可有效防止内存泄漏|存在内存泄漏风险，需要开发者谨慎管理|
 
 ### 三、如何管理直接内存
-1、分配方式：主要通过ByteBuffer.allocateDirect()方法分配，底层实际上是通过Unsafe类的allocateMemory方法或者操作系
+1、分配方式：主要通过ByteBuffer.allocateDirect()方法分配，底层实际上是通过Unsafe类的allocateMemory方法或者操作系统本地API（如mmap）来实现。
+2、回收机制
+直接内存不受JVM垃圾回收器管理，需手动释放。可通过Cleaner机制进行回收
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5Mzk3MTQ0MywtMTE5NjE4Njk4NSwtMT
-M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
-MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
-I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
-LTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbLTIxNDY3Njk1NzUsLTExOTYxODY5ODUsLT
+EzNjc2MjAxMzgsLTEyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEw
+MDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4Nj
+QyNjYsLTU5OTg1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1
+LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OT
+g4NzUwMzJdfQ==
 -->
