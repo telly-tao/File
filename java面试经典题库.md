@@ -432,10 +432,14 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 2、OutOfMemoryError
 当虚拟机栈或本地方法栈无法动态扩展（如内存不足）时抛出。
 与StackOverflowError不同的是此异常通常与线程创建时栈空间分配失败相关。
-### 二、
+### 二、避免方法
+1、优化递归逻辑
+确保递归有 终止条件，或改用
+
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NzI2MzEsLTExOTYxODY5ODUsLTEzNj
+eyJoaXN0b3J5IjpbNTY3NDk4MTEsLTExOTYxODY5ODUsLTEzNj
 c2MjAxMzgsLTEyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEwMDAx
 NDcxOTEsMTA0MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNj
 YsLTU5OTg1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0x
