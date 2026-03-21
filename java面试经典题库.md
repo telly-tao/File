@@ -478,9 +478,11 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 -Xms/-Xmx：设置初始和最大堆内存（建议设为相同的值避免动态调整），如-Xms4g -Xmx4g
 -Xmn：指定新生代大小（建议占堆1/3~1/4），如-Xmn1g
 -XX：新生代/老年代（默认1:2）,如-XX:NewRatio=2
--XX：Eden/Survivor区比例（默认8::）
+-XX：Eden/Survivor区比例（默认8:1:1）,如-XX:SurvivorRatio=8
+
+#
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NTU1MTAwNCwtMTE5NjE4Njk4NSwtMT
+eyJoaXN0b3J5IjpbMTM3MDk4MDUzNiwtMTE5NjE4Njk4NSwtMT
 M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
 MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
 I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
