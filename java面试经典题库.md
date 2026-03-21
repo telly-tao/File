@@ -395,9 +395,10 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 （3）***需要预留内存***：并发清除阶段用户线程仍在分配内存，若老年代剩余空间不足，会触发“Concurrent Mode Failure”，此时需临时启用Serial Old收集器（STW时间极长）。
 （4）***产生浮动垃圾***：并发标记阶段后新产生的垃圾（如用户线程新建的对象）无法被本次回收，只能留到下次GC，因此需要预留更多内存容纳浮动垃圾。
 
-## 11、
+## 11、什么是类的初始化时机？类加载和类初始化有什么区别？
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMTg3NjQ2OCwtMTM2NzYyMDEzOCwtMT
+eyJoaXN0b3J5IjpbLTQxMjY5MzkzOSwtMTM2NzYyMDEzOCwtMT
 IyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQw
 OTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOT
 A1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUs
