@@ -428,9 +428,12 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 ### 一、可能发生的异常
 1、StackOverflowError
 当线程请求的栈深度超过虚拟机允许的最大深度时抛出，常见于无限递归或方法调用层级过深的情况。
-示例：递归调用未设置终止条件
+示例：递归调用未设置终止条件会导致栈帧不断累计，最终溢出
+2、OutOfMemoryError
+当虚拟机栈或本地方法栈
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc4NzA5OTExLC0xMTk2MTg2OTg1LC0xMz
+eyJoaXN0b3J5IjpbOTI0NjIxMTM3LC0xMTk2MTg2OTg1LC0xMz
 Y3NjIwMTM4LC0xMjI0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAw
 MTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0Mj
 Y2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwt
