@@ -461,9 +461,9 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 |安全性|相对安全，GC机制可有效防止内存泄漏|存在内存泄漏风险，需要开发者谨慎管理|
 
 ### 三、如何管理直接内存
-1、
+1、分配方式：主要通过ByteBuffer.allocateDirect()方法分配，底层实际上是通过Unsafe类的allocateMemory方法或者操作系
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMzYzODgzNywtMTE5NjE4Njk4NSwtMT
+eyJoaXN0b3J5IjpbMTQ5Mzk3MTQ0MywtMTE5NjE4Njk4NSwtMT
 M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
 MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
 I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
