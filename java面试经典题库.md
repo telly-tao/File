@@ -496,12 +496,14 @@ OOM自动转储：-XX:+HeapDumoOnOutOfMemoryError
 - Tomcat调优：调整-Xms120m -Xms120m使Full GC次数降低80%
 - 内存泄漏处理：哟个WeakReference优化缓存设计避免OOM
 
-调优需结合监控工具（如jstat/jmap）分析GC日志，根据应用特点（CPU/IO密集型）选择策略。典型优化路径：确定性能目标-->基准测试-->
+调优需结合监控工具（如jstat/jmap）分析GC日志，根据应用特点（CPU/IO密集型）选择策略。典型优化路径：确定性能目标-->基准测试-->参数调整-->验证效果-->持续迭代。
+
+## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NDQzNTIwNywtMTk5NjIxNjM3MiwtMT
-E5NjE4Njk4NSwtMTM2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1
-MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNz
-k0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYs
-LTE5MDM3ODk1NzUsLTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MT
-Y5NDM5NTIsLTU5ODg3NTAzMl19
+eyJoaXN0b3J5IjpbNDQ1NzkyMTgxLC0xOTk2MjE2MzcyLC0xMT
+k2MTg2OTg1LC0xMzY3NjIwMTM4LC0xMjI0MDM3MjkwLC0xMTUw
+MjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OT
+QyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3Niwt
+MTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNj
+k0Mzk1MiwtNTk4ODc1MDMyXX0=
 -->
