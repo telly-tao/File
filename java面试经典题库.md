@@ -424,15 +424,16 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 - 数组不会触发其元素类型的初始化
 - 常量（static final）在编译期优化，不会触发定义类的初始化
 
-## 12、JVM的栈内存（虚拟机栈额本地栈）中可能发生哪些异常？如何避免？
+## 12、JVM的栈内存（虚拟机栈和本地栈）中可能发生哪些异常？如何避免？
 ### 一、可能发生的异常
 1、StackOverflowError
-当线程请求的栈深度超过
+当线程请求的栈深度超过虚拟机允许的最大深度时抛出，常见于无限递归或方法调用层级过深的情况。
+示例：递归调用未设置终止条件
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MTYwNjExMywtMTE5NjE4Njk4NSwtMT
-M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
-MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
-I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
-LTE0MjE1Nzk1OTUsMTQ3NjA0NTAzMiw0MTY5NDM5NTIsLTU5OD
-g3NTAzMl19
+eyJoaXN0b3J5IjpbNDc4NzA5OTExLC0xMTk2MTg2OTg1LC0xMz
+Y3NjIwMTM4LC0xMjI0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAw
+MTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0Mj
+Y2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwt
+MTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4OD
+c1MDMyXX0=
 -->
