@@ -480,9 +480,10 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 -XX：新生代/老年代（默认1:2）,如-XX:NewRatio=2
 -XX：Eden/Survivor区比例（默认8:1:1）,如-XX:SurvivorRatio=8
 
-#
+### 二、垃圾回收期选择
+G1回收器：-XX:+UseG1HC -XX:MaxGC
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MDk4MDUzNiwtMTE5NjE4Njk4NSwtMT
+eyJoaXN0b3J5IjpbMjEwNzEyMDkyMiwtMTE5NjE4Njk4NSwtMT
 M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
 MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
 I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
