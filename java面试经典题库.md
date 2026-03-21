@@ -452,9 +452,10 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 ### 二、直接内存与堆内存的区别
 | 特性|  堆内存（Heap Memory）| 直接内存（Direct Memory）|
 |----------|----------|----------|
-|管理方式|由JVM管理，是Java对象的主要存储
+|管理方式|由JVM管理，是Java对象的主要存储区域|直接向操作系统申请，不需要JVM管理|
+|GC影响|受JVM垃圾回收器管理，GC时会暂停应用程序（STW）|不受GC
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MzA5OTAyOSwtMTE5NjE4Njk4NSwtMT
+eyJoaXN0b3J5IjpbMTY3MzQ4NjU0MiwtMTE5NjE4Njk4NSwtMT
 M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
 MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
 I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
