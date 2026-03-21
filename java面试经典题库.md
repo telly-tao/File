@@ -442,11 +442,12 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 4、代码审查与测试
 使用静态分许工具检查潜在无限递归或深层调用。
 压力测试模拟高并发场景，验证栈容量是否充足。
-
+### 三、总结对比
+![输入图片说明](/imgs/2026-03-21/QeIoYUJhJZGkrEcO.png)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NjQyODY3MCwtMTE5NjE4Njk4NSwtMT
+eyJoaXN0b3J5IjpbLTQ0MTM0OTc1MiwtMTE5NjE4Njk4NSwtMT
 M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
 MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
 I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
