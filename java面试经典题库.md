@@ -472,8 +472,10 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 - 对于频繁的小对象分配，直接内存可能会引入不必要的开销
 - 需要对直接内存的使用情况进行监控，避免内存泄漏
 - 可通过-XX参数限制直接内存的最大使用量
+
+## 14、如何调优JVM参数以提高应用性能？请举例说明常用的
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MDUyMjgwMCwtMTE5NjE4Njk4NSwtMT
+eyJoaXN0b3J5IjpbMTU1MTkxMjE2MSwtMTE5NjE4Njk4NSwtMT
 M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
 MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
 I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
