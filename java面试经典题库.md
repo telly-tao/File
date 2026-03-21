@@ -434,15 +434,19 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 与StackOverflowError不同的是此异常通常与线程创建时栈空间分配失败相关。
 ### 二、避免方法
 1、优化递归逻辑
-确保递归有 终止条件，或改用
+确保递归有 终止条件，或改用迭代替代递归。
+2、控制方法调用深度
+减少方法嵌套层级，避免复杂调用链。
+3、调整JVM参数
+
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY3NDk4MTEsLTExOTYxODY5ODUsLTEzNj
-c2MjAxMzgsLTEyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEwMDAx
-NDcxOTEsMTA0MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNj
-YsLTU5OTg1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1LC0x
-NDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OTg4Nz
-UwMzJdfQ==
+eyJoaXN0b3J5IjpbNzgyNDUwMDMxLC0xMTk2MTg2OTg1LC0xMz
+Y3NjIwMTM4LC0xMjI0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAw
+MTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0Mj
+Y2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwt
+MTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4OD
+c1MDMyXX0=
 -->
