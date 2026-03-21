@@ -469,12 +469,14 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 
 4、最佳实践
 - 适用于需要频繁与操作系统交互或需要较大内存空间的场景，如网络编程、文件IO等
-- 对于频繁的小对象分配，直接内存可能引入
+- 对于频繁的小对象分配，直接内存可能会引入不必要的开销
+- 需要对直接内存的使用情况进行监控，避免内存泄漏
+- 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTMzNTIwMTcsLTExOTYxODY5ODUsLT
-EzNjc2MjAxMzgsLTEyMjQwMzcyOTAsLTExNTAyNTAzMjMsLTEw
-MDAxNDcxOTEsMTA0MDk0ODMzLC0xMDQ3Mjc5NDI2LC02NzU4Nj
-QyNjYsLTU5OTg1MjkwNSwtOTA2NzAwODc2LC0xOTAzNzg5NTc1
-LC0xNDIxNTc5NTk1LDE0NzYwNDUwMzIsNDE2OTQzOTUyLC01OT
-g4NzUwMzJdfQ==
+eyJoaXN0b3J5IjpbMzcxMDM5NDc2LC0xMTk2MTg2OTg1LC0xMz
+Y3NjIwMTM4LC0xMjI0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAw
+MTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0Mj
+Y2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwt
+MTQyMTU3OTU5NSwxNDc2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4OD
+c1MDMyXX0=
 -->
