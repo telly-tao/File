@@ -466,8 +466,11 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 直接内存不受JVM垃圾回收器管理，需手动释放，可通过Cleaner机制进行回收。不正确的使用可能导致内存泄漏，最终耗尽系统内存
 3、使用示例
 ![输入图片说明](/imgs/2026-03-21/tEtxTgqCkjHzzhua.png)
+
+4、最佳实践
+- 适用于需要
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNjIzODYwMywtMTE5NjE4Njk4NSwtMT
+eyJoaXN0b3J5IjpbMTc4NzQ5NTY4MCwtMTE5NjE4Njk4NSwtMT
 M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
 MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
 I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
