@@ -422,9 +422,9 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 - 类初始化的<clinit>()方法由编译器自动生成，包含所有静态变量和静态代码块
 - 解析阶段可以在初始化之后完成（称为：“懒解析”），以支持Java的动态绑定特性
 - 数组不会触发其元素类型的初始化
-- 常量（static final）在编译期优化，不会触发定义类
+- 常量（static final）在编译期优化，不会触发定义类的初始化
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE1MTk3MTE2LC0xMTk2MTg2OTg1LC0xMz
+eyJoaXN0b3J5IjpbMTQwNzM5MDAwLC0xMTk2MTg2OTg1LC0xMz
 Y3NjIwMTM4LC0xMjI0MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAw
 MTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OTQyNiwtNjc1ODY0Mj
 Y2LC01OTk4NTI5MDUsLTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwt
