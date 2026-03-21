@@ -488,9 +488,10 @@ CMS回收器：-XX:+UseConcMarkSweeGC（低延迟场景）
 ### 三、关键优化参数
 元空间控制：-XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m
 GC日志记录：-Xloggc:/path/gc.log -XX:+PrintGCDetails
-OOM
+OOM自动转储：-XX:+HeapDumoOnOutOfMemoryError
+线程栈大小：-Xss256k（减少线程内存占用）
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg1MTczNjE4LC0xOTk2MjE2MzcyLC0xMT
+eyJoaXN0b3J5IjpbLTU2MTQ2MDk1LC0xOTk2MjE2MzcyLC0xMT
 k2MTg2OTg1LC0xMzY3NjIwMTM4LC0xMjI0MDM3MjkwLC0xMTUw
 MjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5NDgzMywtMTA0NzI3OT
 QyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUsLTkwNjcwMDg3Niwt
