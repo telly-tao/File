@@ -445,10 +445,12 @@ CMS的工作流程可分为4个阶段，其中仅有2个阶段需要暂停用户
 ### 三、总结对比
 ![输入图片说明](/imgs/2026-03-21/QeIoYUJhJZGkrEcO.png)
 
-## 13、什么是直接内存？他与
+## 13、什么是直接内存？他与堆内存有何区别？如何管理直接内存？
+### 一、什么是直接内存？
+直接内存（Direct Memory）是Java中一种特殊的
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczMTExMjE3OSwtMTE5NjE4Njk4NSwtMT
+eyJoaXN0b3J5IjpbMTk5MTMwNDY5NiwtMTE5NjE4Njk4NSwtMT
 M2NzYyMDEzOCwtMTIyNDAzNzI5MCwtMTE1MDI1MDMyMywtMTAw
 MDE0NzE5MSwxMDQwOTQ4MzMsLTEwNDcyNzk0MjYsLTY3NTg2ND
 I2NiwtNTk5ODUyOTA1LC05MDY3MDA4NzYsLTE5MDM3ODk1NzUs
