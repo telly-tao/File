@@ -499,12 +499,13 @@ OOM自动转储：-XX:+HeapDumoOnOutOfMemoryError
 调优需结合监控工具（如jstat/jmap）分析GC日志，根据应用特点（CPU/IO密集型）选择策略。典型优化路径：确定性能目标-->基准测试-->参数调整-->验证效果-->持续迭代。
 
 ## 15、什么是方法区？在不同JDK版本中，方法区的实现有何变化？
-方法区是JVM中用于存储 ***类信息、常量池、
+方法区是JVM中用于存储 ***类信息、常量池、静态变量、即时编译器编译后的代码***等数据的 ***线程共享内存区域***。其核心特点包括：
+1、逻辑性
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3ODMwNjEwNywxMzI0NjI2MzcwLC0xOT
-k2MjE2MzcyLC0xMTk2MTg2OTg1LC0xMzY3NjIwMTM4LC0xMjI0
-MDM3MjkwLC0xMTUwMjUwMzIzLC0xMDAwMTQ3MTkxLDEwNDA5ND
-gzMywtMTA0NzI3OTQyNiwtNjc1ODY0MjY2LC01OTk4NTI5MDUs
-LTkwNjcwMDg3NiwtMTkwMzc4OTU3NSwtMTQyMTU3OTU5NSwxND
-c2MDQ1MDMyLDQxNjk0Mzk1MiwtNTk4ODc1MDMyXX0=
+eyJoaXN0b3J5IjpbMTMwMjM0ODYyLDEzMjQ2MjYzNzAsLTE5OT
+YyMTYzNzIsLTExOTYxODY5ODUsLTEzNjc2MjAxMzgsLTEyMjQw
+MzcyOTAsLTExNTAyNTAzMjMsLTEwMDAxNDcxOTEsMTA0MDk0OD
+MzLC0xMDQ3Mjc5NDI2LC02NzU4NjQyNjYsLTU5OTg1MjkwNSwt
+OTA2NzAwODc2LC0xOTAzNzg5NTc1LC0xNDIxNTc5NTk1LDE0Nz
+YwNDUwMzIsNDE2OTQzOTUyLC01OTg4NzUwMzJdfQ==
 -->
