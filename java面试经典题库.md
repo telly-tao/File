@@ -501,9 +501,10 @@ OOM自动转储：-XX:+HeapDumoOnOutOfMemoryError
 ## 15、什么是方法区？在不同JDK版本中，方法区的实现有何变化？
 方法区是JVM中用于存储 ***类信息、常量池、静态变量、即时编译器编译后的代码***等数据的 ***线程共享内存区域***。其核心特点包括：
 1、逻辑性质：属于堆的逻辑部分但被称为“非堆”，物理内存可不连续
-2、存储内容：类元数据（类型信息、）
+2、存储内容：类元数据（类型信息、字段描述、方法字节码）、运行时常量池、静态变量等
+3、内存管理：可选择固定大小或动态扩展，溢出时抛出
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTg3NTY3OTQsMTMyNDYyNjM3MCwtMT
+eyJoaXN0b3J5IjpbLTE3NDIxMzg1MjgsMTMyNDYyNjM3MCwtMT
 k5NjIxNjM3MiwtMTE5NjE4Njk4NSwtMTM2NzYyMDEzOCwtMTIy
 NDAzNzI5MCwtMTE1MDI1MDMyMywtMTAwMDE0NzE5MSwxMDQwOT
 Q4MzMsLTEwNDcyNzk0MjYsLTY3NTg2NDI2NiwtNTk5ODUyOTA1
